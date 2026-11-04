@@ -644,21 +644,23 @@
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       let pausa = false, reanudar;
       const parar = () => { pausa = true; clearTimeout(reanudar); };
-      const seguir = () => { clearTimeout(reanudar); reanudar = setTimeout(() => pausa = false, 2500); };
-      rollo.addEventListener('pointerdown', parar); rollo.addEventListener('touchstart', parar, { passive: true });
-      rollo.addEventListener('pointerup', seguir); rollo.addEventListener('touchend', seguir);
-      rollo.addEventListener('mouseenter', parar); rollo.addEventListener('mouseleave', seguir);
+      const seguir = () => { clearTimeout(reanudar); reanudar = setTimeout(() => { pos = rollo.scrollLeft; pausa = false; }, 2500); };
+      rollo.addEventListener('pointerdown', parar);
+      rollo.addEventListener('touchstart', parar, { passive: true });
+      ['pointerup', 'pointercancel', 'touchend'].forEach(ev => rollo.addEventListener(ev, seguir));
       rollo.addEventListener('wheel', () => { parar(); seguir(); }, { passive: true });
+      const VELOCIDAD = 0.045; // píxeles por milisegundo (≈45 px por segundo)
       let pos = rollo.scrollLeft, ultimo = performance.now();
       function paso(t) {
         const dt = Math.min(t - ultimo, 50); ultimo = t;
         const mitad = pista.scrollWidth / 2;
         if (!pausa && mitad > rollo.clientWidth) {
-          pos = rollo.scrollLeft + dt * 0.04;
-          if (pos >= mitad) pos -= mitad;
+          pos += dt * VELOCIDAD;          // se acumula con decimales, así avanza aunque sea menos de 1 px por cuadro
+          if (pos >= mitad) pos -= mitad; // vuelve al principio sin que se note
           rollo.scrollLeft = pos;
-        } else if (rollo.scrollLeft >= mitad) {
-          rollo.scrollLeft -= mitad;
+        } else {
+          if (rollo.scrollLeft >= mitad) rollo.scrollLeft -= mitad;
+          pos = rollo.scrollLeft;
         }
         requestAnimationFrame(paso);
       }
