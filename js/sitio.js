@@ -340,12 +340,20 @@ const $ = id => document.getElementById(id);
   const form = $('formContacto'); if (!form) return;
   const msg = $('formMsg');
   const mostrar = (txt, ok) => { msg.className = `text-sm font-semibold ${ok ? 'text-green-700' : 'text-coral'}`; msg.textContent = txt; };
+  // Botones de "Con tus dones / manos / aporte": eligen el motivo del formulario
+  document.querySelectorAll('[data-opcion]').forEach(a => a.addEventListener('click', () => {
+    form.motivo.selectedIndex = +a.dataset.opcion;
+  }));
   form.addEventListener('submit', async e => {
     e.preventDefault();
     const nombre = form.nombre.value.trim(), contacto = form.contacto.value.trim(), mensaje = form.mensaje.value.trim();
     if (!nombre || !contacto || !mensaje) {
-      mostrar(t('Por favor completá tu nombre, cómo responderte y tu mensaje.', 'Por favor, preencha seu nome, como responder você e sua mensagem.'), false);
+      mostrar(t('Por favor completá tu nombre, tu email y tu mensaje.', 'Por favor, preencha seu nome, seu e-mail e sua mensagem.'), false);
       (!nombre ? form.nombre : !contacto ? form.contacto : form.mensaje).focus(); return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contacto)) {
+      mostrar(t('Revisá tu email: parece que no está bien escrito.', 'Confira seu e-mail: parece que não está escrito corretamente.'), false);
+      form.contacto.focus(); return;
     }
     if (!EMAIL_FORMULARIO.includes('@') || EMAIL_FORMULARIO.startsWith('COMPLETAR')) {
       mostrar(t('El formulario todavía no está conectado. Escribinos por Instagram mientras tanto.', 'O formulário ainda não está conectado. Escreva para nós pelo Instagram enquanto isso.'), false); return;
@@ -357,7 +365,7 @@ const $ = id => document.getElementById(id);
         method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           _subject: `Mensaje desde la web: ${form.motivo.value}`, _template: 'table', _captcha: 'false',
-          Nombre: nombre, 'Responder a': contacto, Motivo: form.motivo.value, Mensaje: mensaje, Idioma: PT ? 'Portugués' : 'Español',
+          Nombre: nombre, Email: contacto, _replyto: contacto, Motivo: form.motivo.value, Mensaje: mensaje, Idioma: PT ? 'Portugués' : 'Español',
         }),
       });
       if (!r.ok) throw new Error();
