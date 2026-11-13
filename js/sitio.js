@@ -142,24 +142,55 @@ const $ = id => document.getElementById(id);
 (() => {
   const lista = $('santosLista'); if (!lista) return;
   const colores = ['bg-terracota', 'bg-agua-oscuro', 'bg-malva', 'bg-coral', 'bg-ambar'];
-  lista.querySelectorAll('.santo').forEach((li, i) => {
-    const titulo = li.querySelector('.titulo').textContent;
-    const nombre = li.querySelector('.nombre').textContent;
-    const iniciales = nombre.split(' ').filter(p => p.length > 2).slice(0, 2).map(p => p[0]).join('');
-    li.className = 'list-none';
-    li.innerHTML = `<button type="button" class="santo-btn flex h-full w-full flex-col items-center rounded-3xl bg-white/5 p-4 text-center ring-1 ring-white/10 hover:bg-white/10 transition" aria-expanded="false">
-      <div class="relative mx-auto h-28 w-28 overflow-hidden rounded-full ${colores[i % colores.length]} ring-4 ring-white/20">
-        <span class="absolute inset-0 flex items-center justify-center font-display text-3xl text-white" aria-hidden="true">${iniciales}</span>
-        <img src="${ROOT}img/santos/${li.dataset.foto}.jpg" alt="${t('Foto de', 'Foto de')} ${nombre}" loading="lazy" class="relative h-full w-full object-cover" onerror="this.remove()" />
-      </div>
-      <p class="mt-3 text-xs font-bold uppercase tracking-wider text-agua">${titulo}</p>
-      <p class="font-extrabold leading-tight">${nombre}</p>
-      <p class="cita mt-3 font-script text-base leading-relaxed text-agua-claro" hidden>“${li.dataset.cita}”</p></button>`;
-  });
-  lista.querySelectorAll('.santo-btn').forEach(b => b.addEventListener('click', () => {
-    const cita = b.querySelector('.cita'); const abrir = cita.hidden;
-    cita.hidden = !abrir; b.setAttribute('aria-expanded', abrir); b.classList.toggle('bg-white/15', abrir);
+  const santos = [...lista.querySelectorAll('.santo')].map((li, i) => ({
+    foto: li.dataset.foto, cita: li.dataset.cita, bio: li.dataset.bio || '',
+    titulo: li.querySelector('.titulo').textContent, nombre: li.querySelector('.nombre').textContent,
+    color: colores[i % colores.length],
   }));
+  const iniciales = n => n.replace(/^Hna\.\s|^Ir\.\s/, '').split(' ').filter(p => p.length > 2).slice(0, 2).map(p => p[0]).join('');
+  const retrato = (s, tam) => `<span class="absolute inset-0 flex items-center justify-center font-display ${tam} text-white" aria-hidden="true">${iniciales(s.nombre)}</span>
+      <img src="${ROOT}img/santos/${s.foto}.jpg" alt="${t('Foto de', 'Foto de')} ${s.nombre}" loading="lazy" class="relative h-full w-full object-cover" onerror="this.remove()" />`;
+  lista.innerHTML = santos.map((s, i) => `<li class="list-none">
+    <button type="button" class="santo-btn group flex h-full w-full flex-col items-center rounded-3xl bg-white/5 p-4 text-center ring-1 ring-white/10 hover:bg-white/10 transition" data-i="${i}" aria-haspopup="dialog">
+      <div class="relative mx-auto h-28 w-28 overflow-hidden rounded-full ${s.color} ring-4 ring-white/20 transition group-hover:ring-agua">${retrato(s, 'text-3xl')}</div>
+      <p class="mt-3 text-xs font-bold uppercase tracking-wider text-agua">${s.titulo}</p>
+      <p class="font-extrabold leading-tight">${s.nombre}</p>
+      <span class="mt-auto pt-3 text-xs font-semibold text-white/70 group-hover:text-white">${t('Conocé su historia', 'Conheça a sua história')} <i class="fa-solid fa-plus ml-1" aria-hidden="true"></i></span>
+    </button></li>`).join('');
+
+  const ficha = $('ficha'); let actual = 0, origen = null;
+  function mostrar(i) {
+    actual = (i + santos.length) % santos.length;
+    const s = santos[actual];
+    $('fichaTitulo').textContent = s.titulo;
+    $('fichaNombre').textContent = s.nombre;
+    $('fichaFoto').className = `relative mx-auto -mt-14 h-28 w-28 overflow-hidden rounded-full ${s.color} ring-4 ring-crema`;
+    $('fichaFoto').innerHTML = retrato(s, 'text-3xl');
+    $('fichaBio').textContent = s.bio; $('fichaBio').hidden = !s.bio;
+    $('fichaCita').textContent = `“${s.cita}”`;
+    $('fichaNum').textContent = `${actual + 1} / ${santos.length}`;
+    ficha.querySelector('.overflow-y-auto').scrollTop = 0;
+  }
+  const abrir = i => { origen = document.activeElement; mostrar(i); ficha.hidden = false; document.body.style.overflow = 'hidden'; $('fichaCerrar').focus(); };
+  const cerrar = () => { ficha.hidden = true; document.body.style.overflow = ''; if (origen) origen.focus(); };
+  lista.addEventListener('click', e => { const b = e.target.closest('.santo-btn'); if (b) abrir(Number(b.dataset.i)); });
+  $('fichaCerrar').addEventListener('click', cerrar);
+  $('fichaAnt').addEventListener('click', () => mostrar(actual - 1));
+  $('fichaSig').addEventListener('click', () => mostrar(actual + 1));
+  ficha.addEventListener('click', e => { if (e.target === ficha) cerrar(); });
+  document.addEventListener('keydown', e => {
+    if (ficha.hidden) return;
+    if (e.key === 'Escape') cerrar();
+    if (e.key === 'ArrowRight') mostrar(actual + 1);
+    if (e.key === 'ArrowLeft') mostrar(actual - 1);
+  });
+  // deslizar con el dedo para pasar de santo
+  let x0 = null;
+  ficha.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  ficha.addEventListener('touchend', e => {
+    if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 60) mostrar(actual + (dx < 0 ? 1 : -1));
+  });
 })();
 
 // ---------- Tienda ----------
@@ -188,20 +219,20 @@ const $ = id => document.getElementById(id);
     card.className = 'producto flex flex-col bg-white';
     card.dataset.tipo = p.tipo;
     card.innerHTML = `
-      <button type="button" class="ampliar group relative block overflow-hidden bg-arena" data-foto="${ROOT}img/tienda/${p.foto}" data-titulo="${nombre}" aria-label="${t('Ampliar foto de', 'Ampliar foto de')} ${nombre}">
+      <button type="button" class="ampliar group relative block overflow-hidden bg-neutral-100" data-foto="${ROOT}img/tienda/${p.foto}" data-titulo="${nombre}" aria-label="${t('Ampliar foto de', 'Ampliar foto de')} ${nombre}">
         <img src="${ROOT}img/tienda/${p.foto}" alt="${nombre}" loading="lazy" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105" />
-        <span class="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-tinta shadow" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus text-sm"></i></span>
+        <span class="absolute right-2 top-2 flex h-8 w-8 items-center justify-center bg-white text-tinta" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus text-sm"></i></span>
       </button>
       <div class="flex flex-1 flex-col pt-3">
-        <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-tinta/50">${p.tipo === 'Librería' ? t('Librería', 'Livraria') : t('Santería', 'Artigos religiosos')}</p>
-        <h3 class="mt-1 font-display text-base font-bold leading-tight sm:text-lg">${nombre}</h3>
+        <p class="font-condensada text-base leading-none tracking-wider text-tinta/50">${p.tipo === 'Librería' ? t('Librería', 'Livraria') : t('Santería', 'Artigos religiosos')}</p>
+        <h3 class="mt-1 text-base font-bold leading-tight sm:text-lg">${nombre}</h3>
         ${detalle ? `<p class="mt-1 text-sm text-tinta/60">${detalle}</p>` : ''}
         ${opciones ? `<label class="mt-3 block"><span class="sr-only">${t('Opción de', 'Opção de')} ${nombre}</span>
           <select class="opcion w-full border border-tinta/20 bg-white px-2 py-2 text-sm" data-id="${p.id}">
             ${opciones.map(o => `<option>${o}</option>`).join('')}
           </select></label>` : ''}
-        <p class="mt-auto pt-3 font-display text-lg font-bold text-tinta">${textoPrecio(p)}</p>
-        <button type="button" class="agregar mt-3 w-full border border-tinta px-4 py-2.5 text-sm font-bold text-tinta hover:bg-tinta hover:text-white transition" data-id="${p.id}">
+        <p class="mt-auto pt-3 font-condensada text-3xl leading-none text-tinta">${textoPrecio(p)}</p>
+        <button type="button" class="agregar mt-3 w-full bg-tinta px-4 py-2 font-condensada text-xl tracking-wide text-white hover:bg-black transition" data-id="${p.id}">
           ${t('Agregar al pedido', 'Adicionar ao pedido')}
         </button>
       </div>`;

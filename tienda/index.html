@@ -62,26 +62,43 @@
     </div>
   </header>
   <main id="contenido">
-    <section id="tienda" class="scroll-mt-20 bg-white pt-28 sm:pt-32">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <header class="border-b border-tinta/10 pb-10 text-center">
-          <!-- Cuando esté el logo de la tienda, va acá -->
-          <p class="text-xs font-bold uppercase tracking-[0.35em] text-tinta/50">Capilla de jóvenes · Parroquia San Lucas</p>
-          <h1 class="mt-3 font-display text-[2.6rem] uppercase leading-none tracking-tight text-tinta sm:text-7xl">Tienda Pastoral</h1>
-          <p class="mx-auto mt-5 max-w-xl text-tinta/70">Armá tu pedido y envialo por WhatsApp. Coordinamos el pago y lo retirás en la capilla. Todo lo recaudado sostiene nuestra comunidad.</p>
-          <ol class="mx-auto mt-8 grid max-w-3xl gap-px overflow-hidden border border-tinta/10 bg-tinta/10 text-left text-sm sm:grid-cols-3">
-            <li class="flex items-center gap-3 bg-white p-4"><span class="font-display text-2xl text-arena-oscuro">01</span> Agregá productos al carrito</li>
-            <li class="flex items-center gap-3 bg-white p-4"><span class="font-display text-2xl text-arena-oscuro">02</span> Enviá el pedido por WhatsApp</li>
-            <li class="flex items-center gap-3 bg-white p-4"><span class="font-display text-2xl text-arena-oscuro">03</span> Pagás y retirás en la capilla</li>
-          </ol>
-        </header>
-        <div class="mt-8 flex flex-wrap justify-center gap-2" role="group" aria-label="Filtrar productos">
-          <button class="filtro-tienda border border-tinta px-5 py-2 text-sm font-bold bg-tinta text-white" data-tipo="todos" aria-pressed="true">Todo</button>
-          <button class="filtro-tienda border border-tinta px-5 py-2 text-sm font-bold bg-white text-tinta" data-tipo="Librería" aria-pressed="false">Librería</button>
-          <button class="filtro-tienda border border-tinta px-5 py-2 text-sm font-bold bg-white text-tinta" data-tipo="Santería" aria-pressed="false">Santería</button>
+    <section id="tienda" class="scroll-mt-20 bg-white pt-20">
+      <!-- Portada de la tienda, inspirada en la hoja del logo -->
+      <header class="relative mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-between px-5 py-10 sm:px-10">
+        <p class="text-center font-condensada text-lg tracking-wide text-tinta sm:text-2xl">Capilla de jóvenes - Parroquia San Lucas</p>
+        <div class="py-10">
+          <h1 class="sr-only">Tienda Pastoral</h1>
+          <img src="../img/tienda-logo.png" alt="Tienda Pastoral" class="mx-auto w-full max-w-3xl" />
         </div>
-        <div id="productos" class="mt-10 grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 lg:grid-cols-4"></div>
-        <div class="pb-20"></div>
+        <div class="flex items-end justify-between gap-4 font-condensada text-sm leading-tight tracking-wide text-tinta sm:text-base">
+          <p>Plaza Houssay - Facultad de Medicina<br />Paraguay 2150</p>
+          <p class="text-right">Since<br />2025</p>
+        </div>
+      </header>
+
+      <!-- Cómo comprar -->
+      <div class="bg-tinta text-white">
+        <ol class="mx-auto grid max-w-6xl gap-6 px-5 py-8 sm:grid-cols-3 sm:px-10">
+          <li class="flex items-center gap-4"><img src="../img/tienda-cruz-blanca.png" alt="" class="h-9 w-9" /><span><span class="block font-condensada text-2xl leading-none">01. Elegí</span><span class="text-sm text-white/70">Agregá productos al carrito</span></span></li>
+          <li class="flex items-center gap-4"><img src="../img/tienda-cruz-blanca.png" alt="" class="h-9 w-9" /><span><span class="block font-condensada text-2xl leading-none">02. Pedí</span><span class="text-sm text-white/70">Enviá el pedido por WhatsApp</span></span></li>
+          <li class="flex items-center gap-4"><img src="../img/tienda-cruz-blanca.png" alt="" class="h-9 w-9" /><span><span class="block font-condensada text-2xl leading-none">03. Retirá</span><span class="text-sm text-white/70">Pagás y retirás en la capilla</span></span></li>
+        </ol>
+      </div>
+
+      <div class="mx-auto max-w-6xl px-5 sm:px-10">
+        <div class="flex flex-col items-center gap-6 border-b border-tinta py-10 sm:flex-row sm:justify-between">
+          <p class="max-w-md text-center text-sm text-tinta/70 sm:text-left">Todo lo recaudado sostiene nuestra comunidad. Coordinamos el pago por WhatsApp y lo retirás en la capilla.</p>
+          <div class="flex gap-2" role="group" aria-label="Filtrar productos">
+            <button class="filtro-tienda border-2 border-tinta px-5 py-1.5 font-condensada text-xl tracking-wide bg-tinta text-white" data-tipo="todos" aria-pressed="true">Todo</button>
+            <button class="filtro-tienda border-2 border-tinta px-5 py-1.5 font-condensada text-xl tracking-wide bg-white text-tinta" data-tipo="Librería" aria-pressed="false">Librería</button>
+            <button class="filtro-tienda border-2 border-tinta px-5 py-1.5 font-condensada text-xl tracking-wide bg-white text-tinta" data-tipo="Santería" aria-pressed="false">Santería</button>
+          </div>
+        </div>
+        <div id="productos" class="grid grid-cols-2 gap-x-4 gap-y-12 py-12 md:grid-cols-3 lg:grid-cols-4"></div>
+        <div class="flex items-center justify-center gap-3 border-t border-tinta py-10">
+          <img src="../img/tienda-cruz.png" alt="" class="h-6 w-6" />
+          <p class="font-condensada text-lg tracking-wide">Tienda Pastoral · Capilla de jóvenes</p>
+        </div>
       </div>
     </section>
 
@@ -92,7 +109,7 @@
       <p id="visorTitulo" class="mt-3 text-center font-display text-lg text-white"></p>
     </div>
   <button id="carritoBtn" type="button" hidden
-          class="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full bg-tinta px-5 py-3.5 font-bold text-white shadow-2xl hover:bg-black transition"
+          class="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 bg-tinta px-5 py-3.5 font-condensada text-xl tracking-wide text-white shadow-2xl hover:bg-black transition"
           aria-controls="carrito" aria-expanded="false">
     <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Mi pedido
     <span id="carritoCant" class="flex h-6 min-w-6 items-center justify-center rounded-full bg-white px-1.5 text-sm text-tinta">0</span>
@@ -101,7 +118,7 @@
   <div id="carritoFondo" class="fixed inset-0 z-50 bg-black/40" hidden></div>
   <aside id="carrito" class="fixed inset-y-0 right-0 z-50 flex w-full max-w-md flex-col bg-white shadow-2xl" role="dialog" aria-modal="true" aria-labelledby="carritoTitulo" hidden>
     <div class="flex items-center justify-between border-b border-crema-oscuro bg-white px-5 py-4">
-      <h2 id="carritoTitulo" class="text-lg font-extrabold">Tu pedido</h2>
+      <h2 id="carritoTitulo" class="font-condensada text-3xl tracking-wide">Tu pedido</h2>
       <button id="carritoCerrar" type="button" class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-crema" aria-label="Cerrar pedido">
         <i class="fa-solid fa-xmark text-lg" aria-hidden="true"></i>
       </button>
@@ -112,7 +129,7 @@
       <label for="pedidoNombre" class="block text-sm font-bold">Tu nombre</label>
       <input id="pedidoNombre" type="text" autocomplete="name" class="w-full rounded-xl border-0 bg-crema px-4 py-3 ring-1 ring-black/10 focus:ring-2 focus:ring-agua-oscuro" />
       <p class="text-xs text-pizarra-oscuro/70"><i class="fa-solid fa-store mr-1" aria-hidden="true"></i> Retiro en la capilla (Paraguay 2150). El pago se coordina por WhatsApp.</p>
-      <button id="enviarPedido" type="button" class="flex w-full items-center justify-center gap-2 rounded-full bg-green-600 px-6 py-3.5 font-bold text-white shadow hover:bg-green-700 transition">
+      <button id="enviarPedido" type="button" class="flex w-full items-center justify-center gap-2 bg-green-600 px-6 py-3.5 font-bold text-white shadow hover:bg-green-700 transition">
         <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i> Enviar pedido por WhatsApp
       </button>
       <p id="pedidoMsg" class="text-sm font-semibold text-coral" role="status" aria-live="polite"></p>
@@ -138,7 +155,7 @@
       <div>
         <p class="text-sm font-bold uppercase tracking-wider text-agua-claro">Contacto</p>
         <dl class="mt-3 space-y-3 text-sm">
-          <div><dt class="text-white/60">Párroco</dt><dd class="font-semibold">P. Santiago Obiglio</dd></div>
+          <div><dt class="text-white/60">Párroco</dt><dd class="font-semibold">P. Santiago María Obiglio</dd></div>
           <div><dt class="text-white/60">Dirección</dt><dd>Paraguay 2150, Plaza Houssay · CABA<br /><a href="https://maps.app.goo.gl/1hrF257kr9DVHAkt8" target="_blank" rel="noopener" class="font-semibold underline underline-offset-4 hover:text-agua">Cómo llegar en Google Maps</a></dd></div>
           <!-- COMPLETAR teléfono y mail -->
           <div><dt class="text-white/60">Teléfono / WhatsApp</dt><dd>[Completar teléfono]</dd></div>
