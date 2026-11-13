@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth" data-root="../../">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto Santuário · Paróquia San Lucas</title>
+  <meta name="description" content="Paróquia San Lucas, capela dos jovens com 150 anos na Plaza Houssay (Paraguay 2150, Buenos Aires). Horários, atividades, santos jovens, loja pastoral e como colaborar." />
+  <meta name="theme-color" content="#8EC5C2" />
+  <link rel="alternate" hreflang="es-AR" href="../../proyecto-santuario/" />
+  <link rel="alternate" hreflang="pt-BR" href="../../pt/proyecto-santuario/" />
+  <link rel="icon" type="image/png" href="../../img/logo.png" />
+  <link rel="preload" href="../../fonts/aileron-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../../css/estilos.css" />
+</head>
+<body class="bg-crema text-pizarra-oscuro font-sans antialiased">
+
+  <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] bg-terracota text-white px-4 py-2 rounded-lg">Ir para o conteúdo</a>
+  <header id="header" class="fixed inset-x-0 top-0 z-50 bg-crema/95 backdrop-blur transition-shadow">
+    <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8" aria-label="Navegação principal">
+      <a href="../../pt/" class="flex min-w-0 items-center gap-3" aria-label="Paróquia San Lucas, ir para o início">
+        <img src="../../img/logo.png" alt="" class="h-14 w-auto shrink-0" />
+        <span class="min-w-0 leading-tight">
+          <span class="block whitespace-nowrap font-display text-[13px] uppercase tracking-wide sm:text-base">Paróquia San Lucas</span>
+          <span class="block font-script text-[11px] leading-loose sm:text-sm">capela dos jovens</span>
+        </span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-6 whitespace-nowrap text-sm font-semibold"><li><a href="../../pt/nosotros/" class="hover:text-terracota transition">Quem somos</a></li><li><a href="../../pt/proyecto-santuario/" class="text-terracota transition" aria-current="page">Projeto Santuário</a></li><li><a href="../../pt/tienda/" class="hover:text-terracota transition">Loja Pastoral</a></li><li><a href="../../pt/colabora/" class="hover:text-terracota transition">Colabore</a></li></ul>
+      <div class="flex shrink-0 items-center gap-1 sm:gap-2">
+        <a href="../../pt/nosotros/#horarios" class="flex h-11 w-11 items-center justify-center rounded-full bg-terracota text-white shadow hover:bg-terracota-oscuro transition" aria-label="Horários das Missas" title="Horários das Missas">
+          <i class="fa-regular fa-clock text-lg" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/parroquia.sanlucas/" target="_blank" rel="noopener" class="hidden h-11 w-11 items-center justify-center rounded-full text-pizarra-oscuro hover:bg-white sm:flex" aria-label="Instagram da Paróquia San Lucas" title="Instagram">
+          <i class="fa-brands fa-instagram text-2xl" aria-hidden="true"></i>
+        </a>
+        <button id="menuBtn" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full text-pizarra-oscuro hover:bg-white" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+          <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+    <div id="menu" class="absolute right-2 top-20 w-[min(22rem,calc(100vw-1rem))] sm:right-6 lg:right-8" hidden>
+      <div class="max-h-[calc(100dvh-6rem)] overflow-y-auto rounded-2xl bg-white p-3 shadow-2xl ring-1 ring-black/5">
+        <ul class="font-semibold">
+          <li><a href="../../pt/" class="block rounded-lg px-4 py-3 hover:bg-crema">Início</a></li>
+          <li><a href="../../pt/nosotros/" class="block rounded-lg px-4 py-3 hover:bg-crema">Quem somos</a>
+            <ul class="mb-1 ml-4 border-l-2 border-agua pl-2 text-sm font-medium text-pizarra-oscuro/80">
+              <li><a href="../../pt/nosotros/#actividades" class="block rounded-lg px-3 py-2 hover:bg-crema">O que fazemos</a></li>
+              <li><a href="../../pt/nosotros/#horarios" class="block rounded-lg px-3 py-2 hover:bg-crema">Horários</a></li>
+            </ul></li>
+          <li><a href="../../pt/proyecto-santuario/" class="block rounded-lg px-4 py-3 hover:bg-crema">Projeto Santuário</a>
+            <ul class="mb-1 ml-4 border-l-2 border-agua pl-2 text-sm font-medium text-pizarra-oscuro/80">
+              <li><a href="../../pt/proyecto-santuario/#santos" class="block rounded-lg px-3 py-2 hover:bg-crema">Santos jovens</a></li>
+            </ul></li>
+          <li><a href="../../pt/tienda/" class="block rounded-lg px-4 py-3 hover:bg-crema">Loja Pastoral</a></li>
+          <li><a href="../../pt/colabora/" class="block rounded-lg px-4 py-3 hover:bg-crema">Colabore</a></li>
+        </ul>
+        <div class="mt-2 flex items-center justify-between border-t border-black/5 pt-2">
+          <a href="../../proyecto-santuario/" class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm text-pizarra-oscuro/70 hover:bg-crema" hreflang="es-AR"><span class="block h-6 w-6 overflow-hidden rounded-full ring-1 ring-black/10"><svg viewBox="0 0 100 100" class="h-full w-full" aria-hidden="true"><rect width="100" height="100" fill="#74ACDF"/><rect y="33.3" width="100" height="33.4" fill="#fff"/><circle cx="50" cy="50" r="9" fill="#F6B40E"/></svg></span>Ver en español</a>
+          <a href="https://www.instagram.com/parroquia.sanlucas/" target="_blank" rel="noopener" class="mr-2 flex h-10 w-10 items-center justify-center rounded-full hover:bg-crema" aria-label="Instagram da Paróquia San Lucas"><i class="fa-brands fa-instagram text-xl" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="contenido">
+    <section class="relative overflow-hidden bg-agua pt-32 pb-12 sm:pt-36">
+      <div class="nube absolute -left-24 top-10 h-72 w-[36rem]" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+        <p class="font-script text-lg leading-loose text-pizarra-oscuro sm:text-xl">sonhamos juntos</p>
+        <h1 class="font-display uppercase tracking-tight text-[2.4rem] leading-[1] text-terracota sm:text-6xl lg:text-7xl">Projeto Santuário</h1>
+        
+        <div class="mt-7 flex flex-wrap justify-center gap-2"><a href="#santos" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Santos jovens</a></div>
+      </div>
+    </section>
+    <!-- COMPLETAR: texto del Proyecto Santuario (cuando lo mande el padre Santi) -->
+    <section id="santos" class="scroll-mt-20 py-20 bg-pizarra-oscuro text-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="text-center max-w-2xl mx-auto">
+          <p class="font-script text-sm sm:text-xl text-agua">nossos amigos do céu</p>
+          <h2 class="font-display uppercase tracking-tight text-[2.1rem] leading-[1.05] sm:text-5xl lg:text-6xl">Santos jovens</h2>
+          <p class="mt-3 text-white/85">Queremos conhecê-los para aprender com eles, desfrutar da sua amizade e confiar-nos à sua intercessão.</p>
+          <p class="mt-2 text-sm font-semibold text-agua"><i class="fa-regular fa-hand-pointer mr-1" aria-hidden="true"></i> Toque em cada um para ler a sua frase.</p>
+        </header>
+
+                <ul id="santosLista" class="mt-12 grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+          <li class="santo" data-foto="carlo-acutis" data-cita="A Eucaristia é a minha autoestrada para o céu."><span class="titulo">São</span><span class="nombre">Carlo Acutis</span></li>
+          <li class="santo" data-foto="pier-giorgio-frassati" data-cita="Para o alto!"><span class="titulo">São</span><span class="nombre">Pier Giorgio Frassati</span></li>
+          <li class="santo" data-foto="teresita" data-cita="No coração da Igreja, minha Mãe, eu serei o amor."><span class="titulo">Santa</span><span class="nombre">Teresinha do Menino Jesus</span></li>
+          <li class="santo" data-foto="ceferino-namuncura" data-cita="Quero estudar para ser útil ao meu povo."><span class="titulo">Beato</span><span class="nombre">Ceferino Namuncurá</span></li>
+          <li class="santo" data-foto="chiara-luce-badano" data-cita="Se Tu o queres, Jesus, eu também o quero."><span class="titulo">Beata</span><span class="nombre">Chiara Luce Badano</span></li>
+          <li class="santo" data-foto="guido-schaffer" data-cita="Jesus, ajuda-me a cuidar dos pobres."><span class="titulo">Venerável</span><span class="nombre">Guido Schäffer</span></li>
+          <li class="santo" data-foto="chiara-corbella" data-cita="O objetivo da nossa vida é amar e estar sempre dispostos a aprender a amar."><span class="titulo">Serva de Deus</span><span class="nombre">Chiara Corbella</span></li>
+          <li class="santo" data-foto="clarita-segura" data-cita="Meu Deus, Tu és o melhor da minha vida."><span class="titulo">Serva de Deus</span><span class="nombre">Clarita Segura</span></li>
+          <li class="santo" data-foto="guillermo-muzzio" data-cita="Fazer a vontade de Deus e ser feliz é a mesma coisa."><span class="titulo">Servo de Deus</span><span class="nombre">Guillermo Muzzio</span></li>
+          <li class="santo" data-foto="hna-claire" data-cita="A única maneira de eu consolar o que via na cruz era com a minha vida."><span class="titulo">Serva de Deus</span><span class="nombre">Ir. Clare Crockett</span></li>
+        </ul>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <footer id="contacto" class="bg-pizarra-oscuro text-white">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
+      <div>
+        <img src="../../img/logo.png" alt="" class="h-16 w-auto rounded-xl bg-white/90 p-1" />
+        <p class="mt-3 font-display uppercase tracking-wide">Paróquia San Lucas</p>
+        <p class="font-script text-sm leading-loose text-agua-claro">capela dos jovens</p>
+        <p class="mt-2 text-sm text-white/80">Seguimos Jesus no meio do mundo.</p>
+        <a href="https://www.instagram.com/parroquia.sanlucas/" target="_blank" rel="noopener" class="mt-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition" aria-label="Instagram da Paróquia San Lucas">
+          <i class="fa-brands fa-instagram text-2xl" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div>
+        <p class="text-sm font-bold uppercase tracking-wider text-agua-claro">Contato</p>
+        <dl class="mt-3 space-y-3 text-sm">
+          <div><dt class="text-white/60">Pároco</dt><dd class="font-semibold">Pe. Santiago Obiglio</dd></div>
+          <div><dt class="text-white/60">Endereço</dt><dd>Paraguay 2150, Plaza Houssay · CABA<br /><a href="https://maps.app.goo.gl/1hrF257kr9DVHAkt8" target="_blank" rel="noopener" class="font-semibold underline underline-offset-4 hover:text-agua">Como chegar pelo Google Maps</a></dd></div>
+          <!-- COMPLETAR teléfono y mail -->
+          <div><dt class="text-white/60">Telefone / WhatsApp</dt><dd>[Completar telefone]</dd></div>
+          <div><dt class="text-white/60">E-mail</dt><dd>[Completar e-mail]</dd></div>
+        </dl>
+        <a href="../../pt/colabora/#formulario" class="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-pizarra-oscuro hover:bg-crema transition"><i class="fa-regular fa-envelope" aria-hidden="true"></i> Envie uma mensagem</a>
+      </div>
+      <div>
+        <p class="text-sm font-bold uppercase tracking-wider text-agua-claro">Missas</p>
+        <ul class="mt-3 space-y-1 text-sm">
+          <li>Terça a sexta · 12.15 e 19.30</li>
+          <li>Sábados · 19.30</li>
+          <li>Domingos · 12.15 e 19.30</li>
+          <li>Segunda · fechado</li>
+        </ul>
+        <a href="../../pt/nosotros/#horarios" class="mt-3 inline-block text-sm font-semibold underline underline-offset-4 hover:text-agua">Ver todos os horários</a>
+      </div>
+      <div>
+        <iframe title="Mapa: Paróquia Universitária San Lucas, Paraguay 2150"
+          src="https://www.google.com/maps?q=Parroquia+Universitaria+San+Lucas,+Paraguay+2150,+Buenos+Aires&ll=-34.5990275,-58.398112&z=16&output=embed"
+          class="h-48 w-full rounded-2xl border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="border-t border-white/15 py-5 text-center text-xs text-white/70">
+      © <span id="anio">2026</span> Paróquia San Lucas · Arquidiocese de Buenos Aires. Todos os direitos reservados.
+    </div>
+  </footer>
+  <script src="../../js/sitio.js"></script>
+</body>
+</html>
