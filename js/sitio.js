@@ -76,20 +76,21 @@ const $ = id => document.getElementById(id);
   window.addEventListener('scroll', sombra, { passive: true }); sombra();
 
   const btn = $('menuBtn'), menu = $('menu');
+  const icono = btn.querySelector('i');
   const cerrar = () => {
     menu.hidden = true; btn.setAttribute('aria-expanded', 'false');
     btn.setAttribute('aria-label', t('Abrir menú', 'Abrir menu'));
-    btn.innerHTML = '<i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>';
+    icono.classList.replace('fa-xmark', 'fa-bars');   // se cambia solo el dibujo, sin reemplazar el botón
   };
-  btn.addEventListener('click', () => {
-    if (!menu.hidden) return cerrar();
+  const abrir = () => {
     menu.hidden = false; btn.setAttribute('aria-expanded', 'true');
     btn.setAttribute('aria-label', t('Cerrar menú', 'Fechar menu'));
-    btn.innerHTML = '<i class="fa-solid fa-xmark text-xl" aria-hidden="true"></i>';
-  });
+    icono.classList.replace('fa-bars', 'fa-xmark');
+  };
+  btn.addEventListener('click', e => { e.stopPropagation(); menu.hidden ? abrir() : cerrar(); });
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', cerrar));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrar(); });
-  document.addEventListener('click', e => { if (!menu.hidden && !menu.contains(e.target) && !btn.contains(e.target)) cerrar(); });
+  document.addEventListener('click', e => { if (!menu.hidden && !e.target.closest('#menu, #menuBtn')) cerrar(); });
   const anio = $('anio'); if (anio) anio.textContent = new Date().getFullYear();
 })();
 
@@ -207,21 +208,11 @@ const $ = id => document.getElementById(id);
     grilla.appendChild(card);
   });
 
-  // Mostrar pocos productos al principio y un botón "Ver todos"
-  const MOSTRAR_AL_INICIO = 8;
-  let tipo = 'todos', expandida = false;
-  const verTodos = $('verTodos');
+  // Se muestran todos los productos; los botones Librería / Santería filtran
+  let tipo = 'todos';
   function aplicar() {
-    const visibles = [...grilla.querySelectorAll('.producto')].filter(c => tipo === 'todos' || c.dataset.tipo === tipo);
-    grilla.querySelectorAll('.producto').forEach(c => (c.hidden = true));
-    visibles.forEach((c, i) => { c.hidden = !expandida && i >= MOSTRAR_AL_INICIO; });
-    verTodos.parentElement.hidden = visibles.length <= MOSTRAR_AL_INICIO;
-    verTodos.setAttribute('aria-expanded', expandida);
-    verTodos.innerHTML = expandida
-      ? `${t('Ver menos', 'Ver menos')} <i class="fa-solid fa-chevron-up text-xs" aria-hidden="true"></i>`
-      : `${t('Ver todos los productos', 'Ver todos os produtos')} (${visibles.length}) <i class="fa-solid fa-chevron-down text-xs" aria-hidden="true"></i>`;
+    grilla.querySelectorAll('.producto').forEach(c => { c.hidden = !(tipo === 'todos' || c.dataset.tipo === tipo); });
   }
-  verTodos.addEventListener('click', () => { expandida = !expandida; aplicar(); if (!expandida) $('tienda').scrollIntoView({ behavior: 'smooth' }); });
   const filtros = document.querySelectorAll('.filtro-tienda');
   filtros.forEach(btn => btn.addEventListener('click', () => {
     filtros.forEach(b => {
@@ -230,7 +221,7 @@ const $ = id => document.getElementById(id);
       b.classList.toggle('bg-tinta', on); b.classList.toggle('text-white', on);
       b.classList.toggle('bg-white', !on); b.classList.toggle('text-tinta', !on);
     });
-    tipo = btn.dataset.tipo; expandida = false; aplicar();
+    tipo = btn.dataset.tipo; aplicar();
   }));
   aplicar();
 
