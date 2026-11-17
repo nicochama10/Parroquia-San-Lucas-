@@ -44,7 +44,7 @@ const PRODUCTOS = [
   { id: 'san-jose-dormido', tipo: 'Santería', foto: 'san-jose-dormido.jpg', precio: 40000,
     es: ['San José dormido', 'Figura pintada a mano.'], pt: ['São José dormindo', 'Imagem pintada à mão.'] },
   { id: 'pulsera-rosario', tipo: 'Santería', foto: 'denario.jpg', precio: 12000,
-    es: ['Pulsera rosario', 'Con cruz y medalla.'], pt: ['Pulseira terço', 'Com cruz e medalha.'] },
+    es: ['Rosario pulsera', 'Con cruz y medalla.'], pt: ['Terço pulseira', 'Com cruz e medalha.'] },
   { id: 'imagen-carlo', tipo: 'Santería', foto: 'imagen-carlo-acutis.jpg', precio: 40000,
     es: ['Imagen Carlo Acutis', 'Figura pintada a mano.'], pt: ['Imagem de Carlo Acutis', 'Imagem pintada à mão.'] },
   { id: 'detentes', tipo: 'Santería', foto: 'detentes.jpg', precio: 7000,
