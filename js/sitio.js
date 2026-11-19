@@ -43,7 +43,7 @@ const PRODUCTOS = [
     pt: ['Velas aromáticas', 'Escolha o aroma.', ['Flores brancas (São José)', 'Rosas (Maria)', 'Nardo (Jesus ressuscitado)']] },
   { id: 'san-jose-dormido', tipo: 'Santería', foto: 'san-jose-dormido.jpg', precio: 40000,
     es: ['San José dormido', 'Figura pintada a mano.'], pt: ['São José dormindo', 'Imagem pintada à mão.'] },
-  { id: 'pulsera-rosario', tipo: 'Santería', foto: 'denario.jpg', precio: 12000,
+  { id: 'pulsera-rosario', tipo: 'Santería', foto: 'rosario-pulsera.jpg', precio: 12000,
     es: ['Rosario pulsera', 'Con cruz y medalla.'], pt: ['Terço pulseira', 'Com cruz e medalha.'] },
   { id: 'imagen-carlo', tipo: 'Santería', foto: 'imagen-carlo-acutis.jpg', precio: 40000,
     es: ['Imagen Carlo Acutis', 'Figura pintada a mano.'], pt: ['Imagem de Carlo Acutis', 'Imagem pintada à mão.'] },
@@ -111,6 +111,18 @@ const $ = id => document.getElementById(id);
   }).join('');
 })();
 
+// ---------- Proyecto Santuario: el poema aparece solo si tiene texto ----------
+document.querySelectorAll('.poema').forEach(f => { if (f.querySelector('.poema-texto').textContent.trim()) f.hidden = false; });
+
+// ---------- Botones "Ver más" que despliegan un bloque ----------
+document.querySelectorAll('.desplegar').forEach(b => b.addEventListener('click', () => {
+  const bloque = $(b.getAttribute('aria-controls')); if (!bloque) return;
+  const abrir = bloque.hidden; bloque.hidden = !abrir;
+  b.setAttribute('aria-expanded', abrir);
+  b.querySelector('span').textContent = abrir ? t('Ver menos', 'Ver menos') : t('Ver más', 'Ver mais');
+  b.querySelector('i').className = `fa-solid fa-chevron-${abrir ? 'up' : 'down'} text-xs`;
+}));
+
 // ---------- Lo que hacemos (Nosotros) ----------
 (() => {
   const verMas = $('verMasAct'); if (!verMas) return;
@@ -133,9 +145,9 @@ const $ = id => document.getElementById(id);
   filtros.forEach(b => b.addEventListener('click', () => elegir(b.dataset.filtro)));
   verMas.addEventListener('click', () => {
     if (verMas.dataset.accion === 'mas') elegir('todos');
-    else { elegir('anuncio'); $('actividades').scrollIntoView({ behavior: 'smooth' }); }
+    else { elegir('espiritualidad'); $('actividades').scrollIntoView({ behavior: 'smooth' }); }
   });
-  elegir('anuncio');
+  elegir('espiritualidad');
 })();
 
 // ---------- Santos jóvenes (Proyecto Santuario) ----------

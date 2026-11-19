@@ -67,17 +67,40 @@
       <div class="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         <p class="font-script text-lg leading-loose text-pizarra-oscuro sm:text-xl">soñamos juntos</p>
         <h1 class="font-display uppercase tracking-tight text-[2.4rem] leading-[1] text-terracota sm:text-6xl lg:text-7xl">Proyecto Santuario</h1>
-        
-        <div class="mt-7 flex flex-wrap justify-center gap-2"><a href="#santos" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Santos jóvenes</a></div>
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-pizarra-oscuro/90">Camino a los 150 años</p>
+        <div class="mt-7 flex flex-wrap justify-center gap-2"><a href="#proyecto" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">El proyecto</a><a href="#santos" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Santos jóvenes</a><a href="#camino" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Camino a los 150 años</a></div>
       </div>
     </section>
-    <!-- COMPLETAR: texto del Proyecto Santuario (cuando lo mande el padre Santi) -->
-    <section id="santos" class="scroll-mt-20 py-20 bg-pizarra-oscuro text-white">
+    <section id="proyecto" class="scroll-mt-20 bg-white py-16 sm:py-20">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <p class="font-display text-2xl leading-snug text-pizarra-oscuro sm:text-3xl">Un <span class="text-terracota">“santuario”</span> es un lugar sagrado hacia donde peregrinamos. Caminamos buscando o celebrando una gracia, y nos volvemos transformados por el encuentro, y por el camino; enviados al mundo cotidiano con fuerza nueva.</p>
+        <div class="mt-8 space-y-5 text-lg text-pizarra-oscuro/90">
+          <p>Nuestra vocación de “parroquia universitaria” nos mueve especialmente entre los jóvenes. Descubrimos en ellos una fuerte presencia de Dios, reflejada en las historias de los santos jóvenes y ofrecida a todos en la aventura espiritual de sus búsquedas.</p>
+          <p class="rounded-3xl bg-agua-claro p-6 text-pizarra-oscuro">Por todo eso, soñamos con un <strong>“santuario de jóvenes”</strong>: ponernos en movimiento, despertar búsquedas, acompañar caminos, generar encuentros y enviar al servicio y a la alabanza en lo cotidiano.</p>
+          <p><strong>¡A esto te invitamos!</strong> A que vengas, peregrines, te entusiasmes con la alegría de los jóvenes y te conmuevas y comprometas con sus heridas. Porque la voz de Jesús, en medio de nuestra ciudad, sigue diciendo:</p>
+        </div>
+        <figure class="mt-6 rounded-3xl bg-crema p-6 text-center">
+          <blockquote class="font-script text-xl leading-loose text-terracota sm:text-2xl">“¡Joven, levántate!”</blockquote>
+          <figcaption class="mt-2 text-sm font-bold text-pizarra">Lucas 7, 14</figcaption>
+        </figure>
+        <p class="mt-6 text-lg text-pizarra-oscuro/90">Ojalá descubras pronto que…</p>
+        <figure class="mt-4 rounded-3xl bg-crema p-6 text-center">
+          <blockquote class="font-script text-xl leading-loose text-terracota sm:text-2xl">“¡Él vive y te quiere vivo!”</blockquote>
+          <figcaption class="mt-2 text-sm font-bold text-pizarra">Christus Vivit 1</figcaption>
+        </figure>
+
+        <!-- POEMA "El Peregrino" (Mamerto Menapace): pegar el texto dentro del div poema-texto, una linea por renglon. El bloque aparece solo cuando tiene texto. -->
+        <figure class="poema mt-12 rounded-3xl border-l-8 border-agua bg-crema p-6 sm:p-8" hidden>
+          <div class="poema-texto whitespace-pre-line font-script text-lg leading-loose text-pizarra-oscuro"></div>
+          <figcaption class="mt-4 text-sm font-bold uppercase tracking-wider text-pizarra">El Peregrino — Mamerto Menapace</figcaption>
+        </figure>
+      </div>
+    </section>    <section id="santos" class="scroll-mt-20 py-20 bg-pizarra-oscuro text-white">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <header class="text-center max-w-2xl mx-auto">
           <p class="font-script text-sm sm:text-xl text-agua">nuestros amigos del cielo</p>
           <h2 class="font-display uppercase tracking-tight text-[2.1rem] leading-[1.05] sm:text-5xl lg:text-6xl">Santos jóvenes</h2>
-          <p class="mt-3 text-white/85">Queremos conocerlos para aprender de ellos, disfrutar su amistad y confiarnos a su intercesión.</p>
+          <p class="mt-3 text-white/85">Veneramos en nuestra capilla las historias de muchos jóvenes ya proclamados santos, beatos o en camino: “venerables”, “siervos de Dios”. <strong>¡Aprovechá el regalo de su amistad e intercesión!</strong> Podés venir a visitarlos o encontrar más material de ellos acercándote (¿peregrinando?) a la parroquia.</p>
           <p class="mt-2 text-sm font-semibold text-agua"><i class="fa-regular fa-hand-pointer mr-1" aria-hidden="true"></i> Tocá cada uno para conocer su historia.</p>
         </header>
 
@@ -89,7 +112,7 @@
           <li class="santo" data-foto="ceferino-namuncura" data-cita="Quiero estudiar para ser útil a mi gente." data-bio="Un joven argentino de origen mapuche, nacido en la Patagonia. Soñaba con ser sacerdote para servir a su pueblo y acercarlo a Jesús. Murió a los 18 años, después de vivir una fe sencilla, generosa y profundamente misionera."><span class="titulo">Beato</span><span class="nombre">Ceferino Namuncurá</span></li>
           <li class="santo" data-foto="chiara-luce-badano" data-cita="Si lo quieres tú, Jesús, lo quiero yo también." data-bio="Una joven italiana llena de alegría, amiga del deporte y de la vida. A los 17 años enfermó gravemente y vivió su sufrimiento con una confianza extraordinaria en Jesús. Murió a los 18 años, dejando una luz que sigue iluminando a muchos jóvenes."><span class="titulo">Beata</span><span class="nombre">Chiara Luce Badano</span></li>
           <li class="santo" data-foto="guido-schaffer" data-cita="Jesús, ayudame a cuidar a los pobres." data-bio="Un joven brasileño, médico, surfista y seminarista. Encontraba a Jesús tanto en la oración como en el mar y en el servicio a los enfermos y a los pobres. Murió a los 35 años mientras practicaba surf, dejando el testimonio de una vida entregada a Dios."><span class="titulo">Venerable</span><span class="nombre">Guido Schäffer</span></li>
-          <li class="santo" data-foto="chiara-corbella" data-cita="El objetivo de nuestra vida es amar y estar siempre dispuestos a aprender a amar." data-bio="Una joven romana, alegre y enamorada de la vida, que se casó con Enrico y vivió junto a él una fe sencilla y luminosa. Acompañó con amor a sus dos primeros hijos, que vivieron apenas unos minutos, y en su tercer embarazo le descubrieron un cáncer: postergó su tratamiento para cuidar la vida de su hijo Francesco. Murió a los 28 años, dejando un testimonio de alegría y confianza total en Dios."><span class="titulo">Sierva de Dios</span><span class="nombre">Chiara Corbella</span></li>
+          <li class="santo" data-foto="chiara-corbella" data-cita="El objetivo de nuestra vida es amar y estar siempre dispuestos a aprender a amar." data-bio="Una joven de Roma, alegre y enamorada de la vida, que se casó con Enrico y vivió junto a él una fe sencilla y luminosa. Acompañó con amor a sus dos primeros hijos, que vivieron apenas unos minutos, y en su tercer embarazo le descubrieron un cáncer: postergó su tratamiento para cuidar la vida de su hijo Francesco. Murió a los 28 años, dejando un testimonio de alegría y confianza total en Dios."><span class="titulo">Sierva de Dios</span><span class="nombre">Chiara Corbella</span></li>
           <li class="santo" data-foto="clarita-segura" data-cita="Diosito, sos lo mejor de mi vida." data-bio="Una adolescente argentina, alegre, generosa y de carácter decidido. Soñaba con casarse y formar una familia, y vivió su amistad con Jesús en las cosas sencillas de cada día. Murió a los 17 años, dejando el testimonio de una santidad posible en lo cotidiano."><span class="titulo">Sierva de Dios</span><span class="nombre">Clarita Segura</span></li>
           <li class="santo" data-foto="guillermo-muzzio" data-cita="Hacer la voluntad de Dios y ser feliz es lo mismo." data-bio="Un joven seminarista argentino, conocido como Willy, que descubrió su vocación entre amigos, campamentos y misiones. Después de un grave accidente, vivió años de dolor sin perder su alegría ni su confianza en Dios. Murió a los 30 años."><span class="titulo">Siervo de Dios</span><span class="nombre">Guillermo Muzzio</span></li>
           <li class="santo" data-foto="hna-claire" data-cita="La única manera en que yo podía consolar lo que estaba viendo en la cruz era con mi vida." data-bio="Una joven irlandesa que soñaba con ser actriz famosa. Un encuentro con Jesús crucificado cambió su vida y decidió entregársela por completo. Religiosa alegre, divertida y apasionada, murió a los 33 años en un terremoto en Ecuador."><span class="titulo">Sierva de Dios</span><span class="nombre">Hna. Clare Crockett</span></li>
@@ -119,6 +142,33 @@
       </div>
     </div>
 
+    <section id="camino" class="scroll-mt-20 relative overflow-hidden bg-crema py-16 sm:py-20">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <header class="text-center">
+          <p class="font-script text-sm text-terracota sm:text-xl">1881 – 2031</p>
+          <h2 class="font-display uppercase tracking-tight text-[2.1rem] leading-[1.05] text-pizarra sm:text-5xl lg:text-6xl">Camino a los 150 años</h2>
+        </header>
+        <div class="mt-10 grid gap-8 md:grid-cols-5 md:items-center">
+          <div class="space-y-5 text-lg text-pizarra-oscuro/90 md:col-span-3">
+            <p>Nuestra capilla fue construida en el año <strong>1881</strong>, formando parte del primer Hospital de Clínicas al principio y dedicada en esta segunda etapa a la pastoral de los jóvenes y la universidad. Se acerca así el <strong>2031</strong>, año en el que celebraremos el 150 aniversario.</p>
+            <p>Queremos prepararnos para esta gran fiesta mediante un camino <strong>espiritual, edilicio y misionero</strong>, ¡que está en construcción! Estamos rezando, discerniendo y trabajando en el proyecto… próximamente podremos compartir más detalles.</p>
+          </div>
+          <div class="rounded-3xl bg-pizarra p-7 text-center text-white shadow-lg md:col-span-2">
+            <span class="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest"><i class="fa-regular fa-clock" aria-hidden="true"></i> Próximamente</span>
+            <p class="mt-4 font-display text-xl uppercase tracking-tight sm:text-2xl">El camino 2027 – 2031</p>
+            <ul class="mt-4 flex flex-wrap justify-center gap-2 text-sm font-bold">
+              <li class="rounded-full bg-white/10 px-3 py-1.5">Espiritual</li>
+              <li class="rounded-full bg-white/10 px-3 py-1.5">Edilicio</li>
+              <li class="rounded-full bg-white/10 px-3 py-1.5">Misionero</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-10 rounded-3xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5 sm:p-8">
+          <p class="text-lg text-pizarra-oscuro">Contamos con <strong>tu oración, tus ideas y tus comentarios</strong>.</p>
+          <a href="../colabora/#formulario" class="mt-4 inline-flex items-center gap-2 rounded-full bg-terracota px-6 py-3 font-bold text-white shadow hover:bg-terracota-oscuro transition">Escribinos <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer id="contacto" class="bg-pizarra-oscuro text-white">

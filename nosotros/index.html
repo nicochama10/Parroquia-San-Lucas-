@@ -68,7 +68,7 @@
         
         <h1 class="font-display uppercase tracking-tight text-[2.4rem] leading-[1] text-terracota sm:text-6xl lg:text-7xl">Nosotros</h1>
         <p class="mx-auto mt-4 max-w-2xl text-lg text-pizarra-oscuro/90">Una capilla de jóvenes en medio de la ciudad.</p>
-        <div class="mt-7 flex flex-wrap justify-center gap-2"><a href="#nosotros" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Quiénes somos</a><a href="#actividades" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Lo que hacemos</a><a href="#horarios" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Horarios</a></div>
+        <div class="mt-7 flex flex-wrap justify-center gap-2"><a href="#nosotros" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Quiénes somos</a><a href="#actividades" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Lo que hacemos</a><a href="#valores" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Nuestros valores</a><a href="#horarios" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Horarios</a></div>
       </div>
     </section>    <section id="nosotros" class="scroll-mt-20 relative overflow-hidden bg-agua py-20">
       <div class="nube absolute right-0 top-10 h-72 w-[36rem]" aria-hidden="true"></div>
@@ -95,7 +95,11 @@
         </figure>
 
         <!-- Misión -->
-        <div class="mt-16 rounded-3xl bg-crema/95 p-6 sm:p-10 shadow-xl">
+        <div class="mt-8 text-center">
+          <button type="button" class="desplegar inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-pizarra-oscuro shadow ring-1 ring-black/10 hover:bg-crema transition" aria-controls="mision" aria-expanded="false"><span>Ver más</span> <i class="fa-solid fa-chevron-down text-xs" aria-hidden="true"></i></button>
+        </div>
+        <div id="mision" hidden>
+        <div class="mt-6 rounded-3xl bg-crema/95 p-6 sm:p-10 shadow-xl">
           <div class="text-center max-w-2xl mx-auto">
             <p class="mt-1 font-display uppercase tracking-tight text-2xl sm:text-4xl text-pizarra-oscuro leading-tight">Enamorados de Jesús, buscamos vivir juntos su Buena Noticia en medio de la ciudad</p>
           </div>
@@ -117,9 +121,257 @@
             </article>
           </div>
         </div>
+        </div>
+      </div>
+    </section>
 
+        <section id="actividades" class="scroll-mt-20 py-20 bg-crema">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="text-center max-w-2xl mx-auto">
+          <p class="font-script text-sm sm:text-xl text-terracota">nuestra misión</p>
+          <h2 class="font-display uppercase tracking-tight text-[2.1rem] leading-[1.05] sm:text-5xl lg:text-6xl text-pizarra">Lo que hacemos</h2>
+          <p class="mt-3 text-pizarra-oscuro/80">Pensamos nuestras actividades desde las cuatro dimensiones vitales de la Iglesia.</p>
+        </header>
+
+        <div class="mt-10 flex flex-wrap justify-center gap-2" role="group" aria-label="Filtrar actividades por dimensión"><button class="filtro rounded-full px-4 py-2 text-sm font-bold bg-white text-pizarra-oscuro ring-1 ring-black/10" data-filtro="espiritualidad" aria-pressed="false">Espiritualidad</button><button class="filtro rounded-full px-4 py-2 text-sm font-bold bg-white text-pizarra-oscuro ring-1 ring-black/10" data-filtro="caridad" aria-pressed="false">Caridad</button><button class="filtro rounded-full px-4 py-2 text-sm font-bold bg-white text-pizarra-oscuro ring-1 ring-black/10" data-filtro="fraternidad" aria-pressed="false">Fraternidad</button><button class="filtro rounded-full px-4 py-2 text-sm font-bold bg-white text-pizarra-oscuro ring-1 ring-black/10" data-filtro="anuncio" aria-pressed="false">Anuncio</button><button class="filtro rounded-full px-4 py-2 text-sm font-bold bg-white text-pizarra-oscuro ring-1 ring-black/10" data-filtro="todos" aria-pressed="false">Ver todas</button></div>
+
+        <div class="mt-10 space-y-12">
+        <!-- ESPIRITUALIDAD -->
+        <div class="dimension" data-cat="espiritualidad">
+          <div class="flex items-center gap-3">
+            <span class="flex h-11 w-11 items-center justify-center rounded-full bg-malva text-white"><i class="fa-solid fa-church" aria-hidden="true"></i></span>
+            <h3 class="font-display uppercase tracking-tight text-2xl text-pizarra-oscuro">Espiritualidad</h3>
+          </div>
+          <p class="mt-3 max-w-3xl text-pizarra-oscuro/80">Espacios y actividades para celebrar, crecer y perseverar en la fe.</p>
+          <div class="mt-5 flex gap-3 overflow-x-auto snap-x pb-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:pb-0">
+              <img src="../img/comunidad/celebracion-1.jpg" alt="Celebración de la misa" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+              <img src="../img/comunidad/celebracion-2.jpg" alt="Misa en la puerta de la capilla con música" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+              <img src="../img/comunidad/celebracion-3.jpg" alt="Altar preparado para la adoración" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+            </div>
+          <div class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Sacramentos</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Misas, adoraciones, confesiones, bautismos, casamientos y más.</p>
+              <div class="mt-auto"><a href="#horarios" class="mt-4 inline-block text-sm font-bold text-pizarra underline underline-offset-4">Ver horarios</a></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Andes</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Grupo de universitarios de 18 a 23 años.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Martes por medio</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Cafarnaúm</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espacio de formación para madurar en la fe, para jóvenes y adultos.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Todo el año</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Mesa Joven</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Un encuentro para compartir una etapa del camino del peregrino.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Último miércoles de cada mes</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Músicos</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espacio de alabanzas, Vía Crucis (Cuaresma) y Vía Lucis (Pascua).</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Todo el año</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Caná</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espacio para matrimonios jóvenes y noviazgos.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Todo el año</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Pascua Joven</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espacio para jóvenes de 20 a 30 años y la comunidad, para profundizar la Semana Santa.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Marzo / abril</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Cenáculos</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Grupos de vida.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Todo el año</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Retiro de Profundización</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espacio para aprender de la vida oculta de Jesús.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Septiembre</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Mesa de Adolescentes</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Para chicos de 1.º a 5.º año del secundario.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Todo el año</p></div>
+            </article>
+          </div>
+        </div>
+
+        <!-- CARIDAD -->
+        <div class="dimension" data-cat="caridad">
+          <div class="flex items-center gap-3">
+            <span class="flex h-11 w-11 items-center justify-center rounded-full bg-coral text-white"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i></span>
+            <h3 class="font-display uppercase tracking-tight text-2xl text-pizarra-oscuro">Caridad</h3>
+          </div>
+          <p class="mt-3 max-w-3xl text-pizarra-oscuro/80">Espacios y actividades solidarias al servicio de los que más lo necesitan.</p>
+          <div class="mt-5 flex gap-3 overflow-x-auto snap-x pb-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:pb-0">
+              <img src="../img/comunidad/servicio-1.jpg" alt="Mesa abierta en el patio de la capilla" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+              <img src="../img/comunidad/servicio-2.jpg" alt="Mesa abierta dentro de la capilla" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+              <img src="../img/comunidad/servicio-3.jpg" alt="Mesa abierta un sábado al mediodía" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+            </div>
+          <div class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-coral">
+              <h4 class="text-xl font-extrabold">Mesa Abierta</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espacio para compartir la fe y vivencias con nuestros hermanos en situación de calle.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Sábados al mediodía</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-coral">
+              <h4 class="text-xl font-extrabold">Gólgota</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espacio para jóvenes varones mayores de 18 que quieran vivir una caridad concreta visitando el penal de menores.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Sábado por medio</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-coral">
+              <h4 class="text-xl font-extrabold">Samaría</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Voluntariado en el Hospital de Clínicas.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Todo el año</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-coral">
+              <h4 class="text-xl font-extrabold">Escuela de vida misionera</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espacio para jóvenes de 23 a 35 años que busquen misionar de una manera distinta y madura.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Enero</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-coral">
+              <h4 class="text-xl font-extrabold">Tepeyac</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Trabajo comunitario en el jardín, entre otros.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Todo el año</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-coral">
+              <h4 class="text-xl font-extrabold">Jornada Misionera</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Misión abierta a toda la comunidad, para jóvenes y adultos, en una localidad de la provincia de Buenos Aires.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Octubre / noviembre</p></div>
+            </article>
+          </div>
+        </div>
+
+        <!-- FRATERNIDAD -->
+        <div class="dimension" data-cat="fraternidad">
+          <div class="flex items-center gap-3">
+            <span class="flex h-11 w-11 items-center justify-center rounded-full bg-menta text-pizarra-oscuro"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span>
+            <h3 class="font-display uppercase tracking-tight text-2xl text-pizarra-oscuro">Fraternidad</h3>
+          </div>
+          <p class="mt-3 max-w-3xl text-pizarra-oscuro/80">Espacios y actividades que motivan nuestra acogida, participación y organización comunitaria.</p>
+          <div class="mt-5 flex gap-3 overflow-x-auto snap-x pb-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:pb-0">
+              <img src="../img/comunidad/fraternidad-1.jpg" alt="Encuentro de jóvenes" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+              <img src="../img/comunidad/fraternidad-2.jpg" alt="Banda de la peña" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+              <img src="../img/comunidad/fraternidad-3.jpg" alt="Grupo de jóvenes de la comunidad" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+            </div>
+          <div class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-menta">
+              <h4 class="text-xl font-extrabold">Eventos</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Fiestas patronales, cena de fin de año, peñas, festa junina y Mesa Nueva.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Todo el año</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-menta">
+              <h4 class="text-xl font-extrabold">Peregrinaciones</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">A Luján y a la Mariápolis.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Octubre / noviembre</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-menta">
+              <h4 class="text-xl font-extrabold">Servicios comunitarios</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Consejos, servidores de la Comunión y de la Hospitalidad.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Todo el año</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-menta">
+              <h4 class="text-xl font-extrabold">Mesa de Padrinos</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Dos encuentros para compartir con los padrinos las vivencias y avances de nuestra comunidad.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Marzo / octubre</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-menta">
+              <h4 class="text-xl font-extrabold">Mesa Nueva</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Para conocer y acercarse a la vida de nuestra capilla.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Noviembre</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-menta">
+              <h4 class="text-xl font-extrabold">Secretaría</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Organización general de la secretaría: jóvenes secretarios, sacerdotes y más.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Todo el año</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-menta">
+              <h4 class="text-xl font-extrabold">Jornada de estudio</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espacio para estudiar juntos y encontrarnos con Dios.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Todo el año</p></div>
+            </article>
+          </div>
+        </div>
+
+        <!-- ANUNCIO -->
+        <div class="dimension" data-cat="anuncio">
+          <div class="flex items-center gap-3">
+            <span class="flex h-11 w-11 items-center justify-center rounded-full bg-ambar text-white"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i></span>
+            <h3 class="font-display uppercase tracking-tight text-2xl text-pizarra-oscuro">Anuncio</h3>
+          </div>
+          <p class="mt-3 max-w-3xl text-pizarra-oscuro/80">Espacios y actividades para salir al encuentro de quienes no conocen a Dios, están alejados o iniciando su camino de fe.</p>
+          <div class="mt-5 flex gap-3 overflow-x-auto snap-x pb-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:pb-0">
+              <img src="../img/comunidad/anuncio-1.jpg" alt="Encuentro de formación de jóvenes" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+              <img src="../img/comunidad/anuncio-2.jpg" alt="Grupo de misión" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+              <img src="../img/comunidad/anuncio-3.jpg" alt="Jóvenes de la comunidad" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+            </div>
+          <div class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-ambar">
+              <h4 class="text-xl font-extrabold">Catequesis Jóvenes</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espacio de formación para jóvenes, especialmente para la Confirmación.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Mayo / junio</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-ambar">
+              <h4 class="text-xl font-extrabold">Retiro Jordán</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Retiro de impacto para jóvenes que quieran tener un triple encuentro: con Jesús, con ellos mismos y con los demás.</p>
+              <div class="mt-auto"><p class="mt-4"><span class="inline-flex items-center gap-1.5 rounded-full bg-pizarra px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-white"><i class="fa-regular fa-clock" aria-hidden="true"></i> Próximamente</span></p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-ambar">
+              <h4 class="text-xl font-extrabold">Alpha</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Un curso para buscar el sentido de la fe.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> De marzo a julio</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-ambar">
+              <h4 class="text-xl font-extrabold">Capilla Santuario</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Día de Carlo Acutis (el 12 de cada mes), misa de brasileros, misa de universitarios y novenas.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Todo el año</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-ambar">
+              <h4 class="text-xl font-extrabold">Tienda Pastoral</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Productos diseñados para ayudar a vivir la fe en el día a día.</p>
+              <div class="mt-auto"><a href="../tienda/" class="mt-4 inline-block text-sm font-bold text-pizarra underline underline-offset-4">Ver la tienda</a></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-ambar">
+              <h4 class="text-xl font-extrabold">Comunicación</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Redes, estampas, cartelera, Linktree y página web.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Todo el año</p></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="mt-10 text-center" id="verMasActWrap"><button id="verMasAct" type="button" class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-pizarra-oscuro shadow ring-1 ring-black/10 hover:bg-crema-oscuro transition" aria-expanded="false"></button></div>
+
+        <!-- Sacramentos (COMPLETAR requisitos y fechas) -->
+          <article class="rounded-3xl bg-pizarra p-6 sm:p-8 text-white shadow-sm">
+            <div class="grid gap-6 md:grid-cols-3">
+              <div>
+                <span class="text-xs font-extrabold uppercase tracking-wider text-agua-claro">Sacramentos</span>
+                <h3 class="mt-2 font-display uppercase tracking-tight text-3xl">Bautismos, Confirmación y matrimonios</h3>
+              </div>
+              <ul class="md:col-span-2 grid gap-4 sm:grid-cols-3">
+                <li class="rounded-2xl bg-white/10 p-4"><i class="fa-solid fa-water text-xl text-agua-claro" aria-hidden="true"></i><p class="mt-2 font-bold">Bautismos</p><p class="text-sm opacity-90">[Completar: fechas y charlas preparatorias]</p></li>
+                <li class="rounded-2xl bg-white/10 p-4"><i class="fa-solid fa-fire text-xl text-agua-claro" aria-hidden="true"></i><p class="mt-2 font-bold">Confirmación</p><p class="text-sm opacity-90">La preparación se hace en <em>Catequesis Jóvenes</em>.</p></li>
+                <li class="rounded-2xl bg-white/10 p-4"><i class="fa-solid fa-ring text-xl text-agua-claro" aria-hidden="true"></i><p class="mt-2 font-bold">Matrimonios</p><p class="text-sm opacity-90">[Completar: requisitos y anticipación]</p></li>
+              </ul>
+            </div>
+            <a href="#contacto" class="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 font-bold text-pizarra-oscuro hover:bg-crema transition">Consultá en secretaría <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="valores" class="scroll-mt-20 relative overflow-hidden bg-agua py-20">
+      <div class="nube absolute -left-24 top-10 h-72 w-[36rem]" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <!-- Valores -->
-        <div class="mt-16">
+        <div>
           <div class="text-center max-w-2xl mx-auto">
             <h2 class="font-display uppercase tracking-tight text-[2.1rem] leading-[1.05] sm:text-5xl lg:text-6xl text-pizarra">Nuestros valores</h2>
             <p class="mt-3 text-lg text-pizarra-oscuro">Nos gusta cuidar y transmitir en todo lo que hacemos un espíritu <strong>creativo, profundo y misericordioso</strong>.</p>
@@ -140,200 +392,7 @@
           </div>
         </div>
       </div>
-    </section>
-
-        <section id="actividades" class="scroll-mt-20 py-20 bg-crema">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <header class="text-center max-w-2xl mx-auto">
-          <p class="font-script text-sm sm:text-xl text-terracota">nuestra misión</p>
-          <h2 class="font-display uppercase tracking-tight text-[2.1rem] leading-[1.05] sm:text-5xl lg:text-6xl text-pizarra">Lo que hacemos</h2>
-          <p class="mt-3 text-pizarra-oscuro/80">Pensamos nuestras actividades desde las cuatro dimensiones vitales de la Iglesia.</p>
-        </header>
-
-        <div class="mt-10 flex flex-wrap justify-center gap-2" role="group" aria-label="Filtrar actividades por dimensión">
-          <button class="filtro rounded-full px-4 py-2 text-sm font-bold bg-white text-pizarra-oscuro ring-1 ring-black/10" data-filtro="anuncio" aria-pressed="false">Anuncio</button>
-          <button class="filtro rounded-full px-4 py-2 text-sm font-bold bg-white text-pizarra-oscuro ring-1 ring-black/10" data-filtro="servicio" aria-pressed="false">Servicio</button>
-          <button class="filtro rounded-full px-4 py-2 text-sm font-bold bg-white text-pizarra-oscuro ring-1 ring-black/10" data-filtro="celebracion" aria-pressed="false">Celebración</button>
-          <button class="filtro rounded-full px-4 py-2 text-sm font-bold bg-white text-pizarra-oscuro ring-1 ring-black/10" data-filtro="fraternidad" aria-pressed="false">Fraternidad</button>
-          <button class="filtro rounded-full px-4 py-2 text-sm font-bold bg-white text-pizarra-oscuro ring-1 ring-black/10" data-filtro="todos" aria-pressed="false">Ver todas</button>
-        </div>
-
-        <div class="mt-10 space-y-12">
-          <!-- ANUNCIO -->
-          <div class="dimension" data-cat="anuncio">
-            <div class="flex items-center gap-3">
-              <span class="flex h-11 w-11 items-center justify-center rounded-full bg-ambar text-white"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i></span>
-              <h3 class="font-display uppercase tracking-tight text-2xl text-pizarra-oscuro">Anuncio</h3>
-            </div>
-            <div class="mt-5 flex gap-3 overflow-x-auto snap-x pb-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:pb-0">
-              <img src="../img/comunidad/anuncio-1.jpg" alt="Encuentro de formación de jóvenes" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
-              <img src="../img/comunidad/anuncio-2.jpg" alt="Grupo de misión" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
-              <img src="../img/comunidad/anuncio-3.jpg" alt="Jóvenes de la comunidad" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
-            </div>
-            <div class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-ambar">
-                <h4 class="text-xl font-extrabold">Pascua Joven 20-30</h4>
-                <p class="mt-2 text-pizarra-oscuro/80">Vivimos juntos la Semana Santa como jóvenes de 20 a 30 años.</p>
-                <p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Abril</p>
-              </article>
-              <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-ambar">
-                <h4 class="text-xl font-extrabold">Alpha</h4>
-                <p class="mt-2 text-pizarra-oscuro/80">Un curso para iniciarnos en la fe.</p>
-                <p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Abril a junio</p>
-              </article>
-              <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-ambar">
-                <h4 class="text-xl font-extrabold">Buscando el fuego</h4>
-                <p class="mt-2 text-pizarra-oscuro/80">Un curso en tres etapas para madurar en la fe. Prepara también para la Confirmación.</p>
-                <p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-solid fa-fire mr-1" aria-hidden="true"></i> Tres etapas</p>
-              </article>
-              <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-ambar">
-                <h4 class="text-xl font-extrabold">Samaría</h4>
-                <p class="mt-2 text-pizarra-oscuro/80">Tarde de misión en Plaza Houssay.</p>
-                <p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-solid fa-location-dot mr-1" aria-hidden="true"></i> Plaza Houssay</p>
-              </article>
-              <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-ambar">
-                <h4 class="text-xl font-extrabold">Cenáculos</h4>
-                <p class="mt-2 text-pizarra-oscuro/80">Grupos de vida para compartir la fe, la vida y el camino de cada uno. Entre ellos, <strong>Andes</strong>, para universitarios de 18 a 22 años.</p>
-                <p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Andes: martes por medio</p>
-              </article>
-              <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-ambar">
-                <h4 class="text-xl font-extrabold">Retiros espirituales</h4>
-                <p class="mt-2 text-pizarra-oscuro/80">Retiros para jóvenes y para todos.</p>
-                <p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Jóvenes: primer finde de noviembre</p>
-              </article>
-            </div>
-          </div>
-
-          <!-- SERVICIO -->
-          <div class="dimension" data-cat="servicio">
-            <div class="flex items-center gap-3">
-              <span class="flex h-11 w-11 items-center justify-center rounded-full bg-coral text-white"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i></span>
-              <h3 class="font-display uppercase tracking-tight text-2xl text-pizarra-oscuro">Servicio</h3>
-            </div>
-            <div class="mt-5 flex gap-3 overflow-x-auto snap-x pb-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:pb-0">
-              <img src="../img/comunidad/servicio-1.jpg" alt="Mesa abierta en el patio de la capilla" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
-              <img src="../img/comunidad/servicio-2.jpg" alt="Mesa abierta dentro de la capilla" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
-              <img src="../img/comunidad/servicio-3.jpg" alt="Mesa abierta un sábado al mediodía" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
-            </div>
-            <div class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-coral">
-                <h4 class="text-xl font-extrabold">Mesa abierta</h4>
-                <p class="mt-2 text-pizarra-oscuro/80">Compartimos la mesa con hermanos en situación de calle.</p>
-                <p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Sábados al mediodía</p>
-              </article>
-              <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-coral">
-                <h4 class="text-xl font-extrabold">Gólgota</h4>
-                <p class="mt-2 text-pizarra-oscuro/80">Misión en el penal de menores, para compartir la fe y acompañar con cercanía.</p>
-                <p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Sábado por medio</p>
-              </article>
-              <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-coral">
-                <h4 class="text-xl font-extrabold">Tepeyac</h4>
-                <p class="mt-2 text-pizarra-oscuro/80">Trabajos de jardinería y mantenimiento en la capilla.</p>
-              </article>
-              <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-coral">
-                <h4 class="text-xl font-extrabold">Escuela de vida misionera</h4>
-                <p class="mt-2 text-pizarra-oscuro/80">Espacio para jóvenes de 23 a 30 años que busquen misionar de una manera distinta y madura.</p>
-                <p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Febrero</p>
-              </article>
-            </div>
-          </div>
-
-          <!-- CELEBRACIÓN -->
-          <div class="dimension" data-cat="celebracion">
-            <div class="flex items-center gap-3">
-              <span class="flex h-11 w-11 items-center justify-center rounded-full bg-malva text-white"><i class="fa-solid fa-church" aria-hidden="true"></i></span>
-              <h3 class="font-display uppercase tracking-tight text-2xl text-pizarra-oscuro">Celebración</h3>
-            </div>
-            <div class="mt-5 flex gap-3 overflow-x-auto snap-x pb-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:pb-0">
-              <img src="../img/comunidad/celebracion-1.jpg" alt="Celebración de la misa" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
-              <img src="../img/comunidad/celebracion-2.jpg" alt="Misa en la puerta de la capilla con música" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
-              <img src="../img/comunidad/celebracion-3.jpg" alt="Altar preparado para la adoración" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
-            </div>
-            <div class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
-                <h4 class="text-xl font-extrabold">Misas</h4>
-                <p class="mt-2 text-pizarra-oscuro/80">De martes a domingo a las 12.15 (salvo sábados) y a las 19.30.</p>
-                <a href="#horarios" class="mt-4 inline-block text-sm font-bold text-pizarra underline underline-offset-4">Ver horarios</a>
-              </article>
-              <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
-                <h4 class="text-xl font-extrabold">Confesiones y adoración</h4>
-                <p class="mt-2 text-pizarra-oscuro/80">Adoración eucarística y confesiones de martes a domingo.</p>
-                <a href="#horarios" class="mt-4 inline-block text-sm font-bold text-pizarra underline underline-offset-4">Ver horarios</a>
-              </article>
-              <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
-                <h4 class="text-xl font-extrabold">Día de Carlo Acutis</h4>
-                <p class="mt-2 text-pizarra-oscuro/80">Cada mes celebramos a nuestro santo joven con una bendición especial.</p>
-                <p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> El 12 de cada mes</p>
-              </article>
-              <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
-                <h4 class="text-xl font-extrabold">Ain Karem</h4>
-                <p class="mt-2 text-pizarra-oscuro/80">Espacio de alabanza.</p>
-                <p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Segundo viernes de cada mes (salvo excepciones)</p>
-              </article>
-            </div>
-          </div>
-
-          <!-- FRATERNIDAD -->
-          <div class="dimension" data-cat="fraternidad">
-            <div class="flex items-center gap-3">
-              <span class="flex h-11 w-11 items-center justify-center rounded-full bg-menta text-pizarra-oscuro"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span>
-              <h3 class="font-display uppercase tracking-tight text-2xl text-pizarra-oscuro">Fraternidad</h3>
-            </div>
-            <div class="mt-5 flex gap-3 overflow-x-auto snap-x pb-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:pb-0">
-              <img src="../img/comunidad/fraternidad-1.jpg" alt="Encuentro de jóvenes" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
-              <img src="../img/comunidad/fraternidad-2.jpg" alt="Banda de la peña" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
-              <img src="../img/comunidad/fraternidad-3.jpg" alt="Grupo de jóvenes de la comunidad" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
-            </div>
-            <p class="mt-3 max-w-3xl text-pizarra-oscuro/80">Diferentes encuentros que nos permiten conocernos más y compartir la alegría de ser comunidad. Propuestas que transforman la soledad existencial en vínculos sólidos.</p>
-            <div class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-menta">
-                <h4 class="text-xl font-extrabold">Mesa Joven</h4>
-                <p class="mt-2 text-pizarra-oscuro/80">Una misa más pausada y una cena para compartir juntos y seguir soñando nuestra capilla.</p>
-                <p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Último miércoles de cada mes</p>
-              </article>
-              <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-menta">
-                <h4 class="text-xl font-extrabold">Grupos de vida</h4>
-                <p class="mt-2 text-pizarra-oscuro/80">Pequeñas comunidades para crecer en la amistad y en la fe.</p>
-              </article>
-              <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-menta">
-                <h4 class="text-xl font-extrabold">Peregrinaciones</h4>
-                <p class="mt-2 text-pizarra-oscuro/80">Caminamos juntos, impulsados por la oración y la fraternidad.</p>
-              </article>
-              <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-menta sm:col-span-2 lg:col-span-3">
-                <h4 class="text-xl font-extrabold">Eventos durante el año</h4>
-                <ul class="mt-3 flex flex-wrap gap-2 text-sm font-semibold">
-                  <li class="rounded-full bg-crema px-3 py-1.5">Peñas</li>
-                  <li class="rounded-full bg-crema px-3 py-1.5">Festa junina</li>
-                  <li class="rounded-full bg-crema px-3 py-1.5">Cena pascual</li>
-                  <li class="rounded-full bg-crema px-3 py-1.5">Fiestas patronales (octubre)</li>
-                  <li class="rounded-full bg-crema px-3 py-1.5">Cena de fin de año</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-
-          <div class="mt-10 text-center" id="verMasActWrap"><button id="verMasAct" type="button" class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-pizarra-oscuro shadow ring-1 ring-black/10 hover:bg-crema-oscuro transition" aria-expanded="false"></button></div>
-
-        <!-- Sacramentos (COMPLETAR requisitos y fechas) -->
-          <article class="rounded-3xl bg-pizarra p-6 sm:p-8 text-white shadow-sm">
-            <div class="grid gap-6 md:grid-cols-3">
-              <div>
-                <span class="text-xs font-extrabold uppercase tracking-wider text-agua-claro">Sacramentos</span>
-                <h3 class="mt-2 font-display uppercase tracking-tight text-3xl">Bautismos, Confirmación y matrimonios</h3>
-              </div>
-              <ul class="md:col-span-2 grid gap-4 sm:grid-cols-3">
-                <li class="rounded-2xl bg-white/10 p-4"><i class="fa-solid fa-water text-xl text-agua-claro" aria-hidden="true"></i><p class="mt-2 font-bold">Bautismos</p><p class="text-sm opacity-90">[Completar: fechas y charlas preparatorias]</p></li>
-                <li class="rounded-2xl bg-white/10 p-4"><i class="fa-solid fa-fire text-xl text-agua-claro" aria-hidden="true"></i><p class="mt-2 font-bold">Confirmación</p><p class="text-sm opacity-90">La preparación se hace en el curso <em>Buscando el fuego</em>.</p></li>
-                <li class="rounded-2xl bg-white/10 p-4"><i class="fa-solid fa-ring text-xl text-agua-claro" aria-hidden="true"></i><p class="mt-2 font-bold">Matrimonios</p><p class="text-sm opacity-90">[Completar: requisitos y anticipación]</p></li>
-              </ul>
-            </div>
-            <a href="#contacto" class="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 font-bold text-pizarra-oscuro hover:bg-crema transition">Consultá en secretaría <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-        <section id="horarios" class="scroll-mt-28 py-20 bg-crema">
+    </section>    <section id="horarios" class="scroll-mt-28 py-20 bg-crema">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <header class="text-center max-w-2xl mx-auto">
           <p class="font-script text-sm sm:text-xl text-terracota">te esperamos</p>
