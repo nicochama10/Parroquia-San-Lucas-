@@ -10,7 +10,7 @@ const WHATSAPP_TIENDA = '5491100000000';
 
 // Mail que recibe los mensajes del formulario de Colabora.
 // La primera vez que alguien escriba, llega un mail de "FormSubmit" para activar el formulario: hay que confirmarlo una sola vez.
-const EMAIL_FORMULARIO = 'COMPLETAR@correo.com';
+const EMAIL_FORMULARIO = 'parroquiasanlucasba@gmail.com';
 
 // AVISOS: aparecen en la página de inicio. Cada aviso desaparece solo después de la fecha "hasta".
 // "es" es el texto en español y "pt" en portugués. "enlace" es opcional.
@@ -341,7 +341,7 @@ document.querySelectorAll('.desplegar').forEach(b => b.addEventListener('click',
   const msg = $('copiadoMsg'); if (!msg) return;
   document.querySelectorAll('.copiar').forEach(btn => btn.addEventListener('click', async () => {
     const texto = $(btn.dataset.copiar).textContent.trim();
-    try { await navigator.clipboard.writeText(texto); msg.textContent = `${btn.dataset.copiar.toUpperCase()} ${t('copiado', 'copiado')}!`; }
+    try { await navigator.clipboard.writeText(texto); msg.textContent = t('¡Alias copiado!', 'Alias copiado!'); }
     catch { msg.textContent = `${t('Copiá manualmente', 'Copie manualmente')}: ${texto}`; }
     setTimeout(() => (msg.textContent = ''), 3000);
   }));
