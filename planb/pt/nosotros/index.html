@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth" data-root="../../../">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quem somos · Paróquia San Lucas</title>
+  <meta name="description" content="Paróquia San Lucas, capela dos jovens com 150 anos na Plaza Houssay (Paraguay 2150, Buenos Aires). Horários, atividades, santos jovens, loja pastoral e como colaborar." />
+  <meta name="theme-color" content="#8EC5C2" />
+  <link rel="alternate" hreflang="es-AR" href="../../nosotros/" />
+  <link rel="alternate" hreflang="pt-BR" href="../../pt/nosotros/" />
+  <link rel="icon" type="image/png" href="../../../img/logo.png" />
+  <link rel="preload" href="../../../fonts/aileron-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../../../css/estilos-planb.css" />
+  <meta name="robots" content="noindex" />
+</head>
+<body class="bg-crema text-pizarra-oscuro font-sans antialiased">
+
+  <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] bg-terracota text-white px-4 py-2 rounded-lg">Ir para o conteúdo</a>
+  <header id="header" class="fixed inset-x-0 top-0 z-50 bg-crema/95 backdrop-blur transition-shadow">
+    <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8" aria-label="Navegação principal">
+      <a href="../../pt/" class="flex min-w-0 items-center gap-3" aria-label="Paróquia San Lucas, ir para o início">
+        <img src="../../../img/logo.png" alt="" class="h-14 w-auto shrink-0" />
+        <span class="min-w-0 leading-tight">
+          <span class="block whitespace-nowrap font-display text-[13px] uppercase tracking-wide sm:text-base">Paróquia San Lucas</span>
+          <span class="block font-script text-[11px] leading-loose sm:text-sm">capela dos jovens</span>
+        </span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-6 whitespace-nowrap text-sm font-semibold"><li><a href="../../pt/nosotros/" class="text-terracota transition" aria-current="page">Quem somos</a></li><li><a href="../../pt/proyecto-santuario/" class="hover:text-terracota transition">Projeto Santuário</a></li><li><a href="../../pt/tienda/" class="hover:text-terracota transition">Loja Pastoral</a></li><li><a href="../../pt/colabora/" class="hover:text-terracota transition">Colabore</a></li></ul>
+      <div class="flex shrink-0 items-center gap-1 sm:gap-2">
+        <a href="../../pt/nosotros/#horarios" class="flex h-11 w-11 items-center justify-center rounded-full bg-terracota text-white shadow hover:bg-terracota-oscuro transition" aria-label="Horários das Missas" title="Horários das Missas">
+          <i class="fa-regular fa-clock text-lg" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/parroquia.sanlucas/" target="_blank" rel="noopener" class="hidden h-11 w-11 items-center justify-center rounded-full text-pizarra-oscuro hover:bg-white sm:flex" aria-label="Instagram da Paróquia San Lucas" title="Instagram">
+          <i class="fa-brands fa-instagram text-2xl" aria-hidden="true"></i>
+        </a>
+        <button id="menuBtn" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full text-pizarra-oscuro hover:bg-white" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+          <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+    <div id="menu" class="absolute right-2 top-20 w-[min(22rem,calc(100vw-1rem))] sm:right-6 lg:right-8" hidden>
+      <div class="max-h-[calc(100dvh-6rem)] overflow-y-auto rounded-2xl bg-white p-3 shadow-2xl ring-1 ring-black/5">
+        <ul class="font-semibold">
+          <li><a href="../../pt/" class="block rounded-lg px-4 py-3 hover:bg-crema">Início</a></li>
+          <li><a href="../../pt/nosotros/" class="block rounded-lg px-4 py-3 hover:bg-crema">Quem somos</a>
+            <ul class="mb-1 ml-4 border-l-2 border-agua pl-2 text-sm font-medium text-pizarra-oscuro/80">
+              <li><a href="../../pt/nosotros/#actividades" class="block rounded-lg px-3 py-2 hover:bg-crema">O que fazemos</a></li>
+              <li><a href="../../pt/nosotros/#horarios" class="block rounded-lg px-3 py-2 hover:bg-crema">Horários</a></li>
+            </ul></li>
+          <li><a href="../../pt/proyecto-santuario/" class="block rounded-lg px-4 py-3 hover:bg-crema">Projeto Santuário</a>
+            <ul class="mb-1 ml-4 border-l-2 border-agua pl-2 text-sm font-medium text-pizarra-oscuro/80">
+              <li><a href="../../pt/proyecto-santuario/#santos" class="block rounded-lg px-3 py-2 hover:bg-crema">Santos jovens</a></li>
+            </ul></li>
+          <li><a href="../../pt/tienda/" class="block rounded-lg px-4 py-3 hover:bg-crema">Loja Pastoral</a></li>
+          <li><a href="../../pt/colabora/" class="block rounded-lg px-4 py-3 hover:bg-crema">Colabore</a></li>
+        </ul>
+        <div class="mt-2 flex items-center justify-between border-t border-black/5 pt-2">
+          <a href="../../nosotros/" class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm text-pizarra-oscuro/70 hover:bg-crema" hreflang="es-AR"><span class="block h-6 w-6 overflow-hidden rounded-full ring-1 ring-black/10"><svg viewBox="0 0 100 100" class="h-full w-full" aria-hidden="true"><rect width="100" height="100" fill="#74ACDF"/><rect y="33.3" width="100" height="33.4" fill="#fff"/><circle cx="50" cy="50" r="9" fill="#F6B40E"/></svg></span>Ver en español</a>
+          <a href="https://www.instagram.com/parroquia.sanlucas/" target="_blank" rel="noopener" class="mr-2 flex h-10 w-10 items-center justify-center rounded-full hover:bg-crema" aria-label="Instagram da Paróquia San Lucas"><i class="fa-brands fa-instagram text-xl" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="contenido">
+    <section class="relative overflow-hidden bg-crema pt-32 pb-12 sm:pt-36">
+      <div class="nube absolute -left-24 top-10 h-72 w-[36rem]" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+        
+        <h1 class="font-display uppercase tracking-tight text-[2.4rem] leading-[1] text-terracota sm:text-6xl lg:text-7xl">Quem somos</h1>
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-pizarra-oscuro/90">Uma capela de jovens no meio da cidade.</p>
+        <div class="mt-7 flex flex-wrap justify-center gap-2"><a href="#nosotros" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Quem somos</a><a href="#actividades" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">O que fazemos</a><a href="#valores" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Nossos valores</a><a href="#horarios" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Horários</a></div>
+      </div>
+    </section>    <section id="nosotros" class="scroll-mt-20 relative overflow-hidden bg-agua py-20">
+      <div class="nube absolute right-0 top-10 h-72 w-[36rem]" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <!-- Vocación -->
+        <div class="grid gap-10 lg:grid-cols-5 lg:items-center">
+          <header class="lg:col-span-2">
+            <p class="font-script text-sm sm:text-xl text-pizarra-oscuro">nossa vocação</p>
+            <h2 class="font-display uppercase tracking-tight leading-[1] text-terracota text-[2.3rem] sm:text-6xl">Quem<br />somos</h2>
+          </header>
+          <div class="lg:col-span-3 space-y-4 text-lg text-pizarra-oscuro">
+            <p>Somos uma pequena capela de 150 anos localizada no centro da <strong>Plaza Houssay</strong>, em meio a numerosas universidades: as faculdades de Medicina, Economia, Farmácia e Odontologia da Universidade de Buenos Aires, entre muitas outras.</p>
+            <p>Fomos sonhados especialmente para acompanhar a multidão de jovens que por aqui <strong>estudam, trabalham, buscam, peregrinam…</strong> servindo-os rumo ao encontro com Deus e com o seu Reino de alegria e caridade.</p>
+            <p class="rounded-2xl bg-white/70 p-5 text-base">
+              <i class="fa-solid fa-circle-info text-pizarra mr-1" aria-hidden="true"></i>
+              Pertencemos à Arquidiocese de Buenos Aires como <strong>paróquia pessoal</strong>: uma comunidade constituída não por um território delimitado, mas por um âmbito pastoral personalizado — no nosso caso, <strong>o juvenil</strong>.
+            </p>
+          </div>
+        </div>
+        <figure class="mt-10">
+          <img src="../../../img/comunidad/plaza-houssay.jpg" alt="Missa ao ar livre na Plaza Houssay, em frente à capela" class="w-full aspect-[3/2] sm:aspect-[21/9] object-cover rounded-3xl shadow-xl" loading="lazy" />
+          <figcaption class="mt-3 text-center font-script text-base text-pizarra-oscuro">no meio da cidade, no meio da praça</figcaption>
+        </figure>
+
+        <!-- Misión -->
+        <div class="mt-8 text-center">
+          <button type="button" class="desplegar inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-pizarra-oscuro shadow ring-1 ring-black/10 hover:bg-crema transition" aria-controls="mision" aria-expanded="false"><span>Ver mais</span> <i class="fa-solid fa-chevron-down text-xs" aria-hidden="true"></i></button>
+        </div>
+        <div id="mision" hidden>
+        <div class="mt-6 rounded-3xl bg-crema/95 p-6 sm:p-10 shadow-xl">
+          <div class="text-center max-w-2xl mx-auto">
+            <p class="mt-1 font-display uppercase tracking-tight text-2xl sm:text-4xl text-pizarra-oscuro leading-tight">Apaixonados por Jesus, buscamos viver juntos a sua Boa Notícia no meio da cidade</p>
+          </div>
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <article class="rounded-2xl bg-white p-6">
+              <i class="fa-solid fa-hands-praying text-2xl text-agua-oscuro" aria-hidden="true"></i>
+              <h3 class="mt-3 text-xl font-extrabold">Casa de oração</h3>
+              <p class="mt-2 text-pizarra-oscuro/85">Onde os sedentos encontrem a água viva de Deus, na beleza da nossa capela silenciosa e no calor das nossas celebrações.</p>
+            </article>
+            <article class="rounded-2xl bg-white p-6">
+              <i class="fa-solid fa-person-walking text-2xl text-terracota" aria-hidden="true"></i>
+              <h3 class="mt-3 text-xl font-extrabold">Casa de missão</h3>
+              <p class="mt-2 text-pizarra-oscuro/85">Impulsionados a partilhar a alegria da fé em Jesus, aprendendo a servir generosamente na realidade concreta de cada um.</p>
+            </article>
+            <article class="rounded-2xl bg-white p-6">
+              <i class="fa-solid fa-people-roof text-2xl text-pizarra" aria-hidden="true"></i>
+              <h3 class="mt-3 text-xl font-extrabold">Família espiritual</h3>
+              <p class="mt-2 text-pizarra-oscuro/85">Servimos os jovens de modo preferencial, mas não exclusivo: uma família missionária junto com crianças, adultos e idosos, cuja fé rejuvenescida todos desfrutamos.</p>
+            </article>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+        <section id="actividades" class="scroll-mt-20 py-20 bg-crema">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="text-center max-w-2xl mx-auto">
+          <p class="font-script text-sm sm:text-xl text-terracota">nossa missão</p>
+          <h2 class="font-display uppercase tracking-tight text-[2.1rem] leading-[1.05] sm:text-5xl lg:text-6xl text-pizarra">O que fazemos</h2>
+          <p class="mt-3 text-pizarra-oscuro/80">Pensamos nossas atividades a partir das quatro dimensões vitais da Igreja.</p>
+        </header>
+
+        <div class="mt-10 flex flex-wrap justify-center gap-2" role="group" aria-label="Filtrar atividades por dimensão"><button class="filtro rounded-full px-4 py-2 text-sm font-bold bg-white text-pizarra-oscuro ring-1 ring-black/10" data-filtro="espiritualidad" aria-pressed="false">Espiritualidade</button><button class="filtro rounded-full px-4 py-2 text-sm font-bold bg-white text-pizarra-oscuro ring-1 ring-black/10" data-filtro="caridad" aria-pressed="false">Caridade</button><button class="filtro rounded-full px-4 py-2 text-sm font-bold bg-white text-pizarra-oscuro ring-1 ring-black/10" data-filtro="fraternidad" aria-pressed="false">Fraternidade</button><button class="filtro rounded-full px-4 py-2 text-sm font-bold bg-white text-pizarra-oscuro ring-1 ring-black/10" data-filtro="anuncio" aria-pressed="false">Anúncio</button><button class="filtro rounded-full px-4 py-2 text-sm font-bold bg-white text-pizarra-oscuro ring-1 ring-black/10" data-filtro="todos" aria-pressed="false">Ver todas</button></div>
+
+        <div class="mt-10 space-y-12">
+        <!-- ESPIRITUALIDAD -->
+        <div class="dimension" data-cat="espiritualidad">
+          <div class="flex items-center gap-3">
+            <span class="flex h-11 w-11 items-center justify-center rounded-full bg-malva text-white"><i class="fa-solid fa-church" aria-hidden="true"></i></span>
+            <h3 class="font-display uppercase tracking-tight text-2xl text-pizarra-oscuro">Espiritualidade</h3>
+          </div>
+          <p class="mt-3 max-w-3xl text-pizarra-oscuro/80">Espaços e atividades para celebrar, crescer e perseverar na fé.</p>
+          <div class="mt-5 flex gap-3 overflow-x-auto snap-x pb-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:pb-0">
+              <img src="../../../img/comunidad/celebracion-1.jpg" alt="Celebração da missa" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+              <img src="../../../img/comunidad/celebracion-2.jpg" alt="Missa na porta da capela, com música" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+              <img src="../../../img/comunidad/celebracion-3.jpg" alt="Altar preparado para a adoração" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+            </div>
+          <div class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Sacramentos</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Missas, adorações, confissões, batizados, casamentos e mais.</p>
+              <div class="mt-auto"><a href="#horarios" class="mt-4 inline-block text-sm font-bold text-pizarra underline underline-offset-4">Ver horários</a></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Andes</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Grupo de universitários de 18 a 23 anos.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Terças-feiras alternadas</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Cafarnaúm</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espaço de formação para amadurecer na fé, para jovens e adultos.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> O ano todo</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Mesa Jovem</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Um encontro para compartilhar uma etapa do caminho do peregrino.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Última quarta-feira de cada mês</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Músicos</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espaço de louvor, Via-Sacra (Quaresma) e Via Lucis (Páscoa).</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> O ano todo</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Caná</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espaço para casais jovens e namorados.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> O ano todo</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Páscoa Jovem</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espaço para jovens de 20 a 30 anos e a comunidade, para aprofundar a Semana Santa.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Março / abril</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Cenáculos</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Grupos de vida.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> O ano todo</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-malva">
+              <h4 class="text-xl font-extrabold">Mesa de Adolescentes</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Para adolescentes do 1º ao 5º ano do ensino médio.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> O ano todo</p></div>
+            </article>
+          </div>
+        </div>
+
+        <!-- CARIDAD -->
+        <div class="dimension" data-cat="caridad">
+          <div class="flex items-center gap-3">
+            <span class="flex h-11 w-11 items-center justify-center rounded-full bg-coral text-white"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i></span>
+            <h3 class="font-display uppercase tracking-tight text-2xl text-pizarra-oscuro">Caridade</h3>
+          </div>
+          <p class="mt-3 max-w-3xl text-pizarra-oscuro/80">Espaços e atividades solidárias a serviço de quem mais precisa.</p>
+          <div class="mt-5 flex gap-3 overflow-x-auto snap-x pb-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:pb-0">
+              <img src="../../../img/comunidad/servicio-1.jpg" alt="Mesa aberta no pátio da capela" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+              <img src="../../../img/comunidad/servicio-2.jpg" alt="Mesa aberta dentro da capela" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+              <img src="../../../img/comunidad/servicio-3.jpg" alt="Mesa aberta num sábado ao meio-dia" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+            </div>
+          <div class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-coral">
+              <h4 class="text-xl font-extrabold">Mesa Aberta</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espaço para compartilhar a fé e vivências com nossos irmãos em situação de rua.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Sábados ao meio-dia</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-coral">
+              <h4 class="text-xl font-extrabold">Gólgota</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espaço para rapazes maiores de 18 anos que queiram viver uma caridade concreta visitando o centro de detenção de menores.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> A cada dois sábados</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-coral">
+              <h4 class="text-xl font-extrabold">Samaría</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Voluntariado no Hospital de Clínicas.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> O ano todo</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-coral">
+              <h4 class="text-xl font-extrabold">Escola de vida missionária</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espaço para jovens de 23 a 35 anos que buscam missionar de uma maneira diferente e madura.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Janeiro</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-coral">
+              <h4 class="text-xl font-extrabold">Tepeyac</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Trabalho comunitário no jardim, entre outros.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> O ano todo</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-coral">
+              <h4 class="text-xl font-extrabold">Jornada Missionária</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Missão aberta a toda a comunidade, para jovens e adultos, em uma cidade da província de Buenos Aires.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Durante o ano</p></div>
+            </article>
+          </div>
+        </div>
+
+        <!-- FRATERNIDAD -->
+        <div class="dimension" data-cat="fraternidad">
+          <div class="flex items-center gap-3">
+            <span class="flex h-11 w-11 items-center justify-center rounded-full bg-menta text-pizarra-oscuro"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span>
+            <h3 class="font-display uppercase tracking-tight text-2xl text-pizarra-oscuro">Fraternidade</h3>
+          </div>
+          <p class="mt-3 max-w-3xl text-pizarra-oscuro/80">Espaços e atividades que motivam nosso acolhimento, participação e organização comunitária.</p>
+          <div class="mt-5 flex gap-3 overflow-x-auto snap-x pb-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:pb-0">
+              <img src="../../../img/comunidad/fraternidad-1.jpg" alt="Encontro de jovens" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+              <img src="../../../img/comunidad/fraternidad-2.jpg" alt="Banda tocando numa festa da comunidade" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+              <img src="../../../img/comunidad/fraternidad-3.jpg" alt="Grupo de jovens da comunidade" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+            </div>
+          <div class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-menta">
+              <h4 class="text-xl font-extrabold">Eventos</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Festas patronais, jantar de fim de ano, peñas e festa junina.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> O ano todo</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-menta">
+              <h4 class="text-xl font-extrabold">Peregrinações</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">A Luján e à Mariápolis.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Outubro / novembro</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-menta">
+              <h4 class="text-xl font-extrabold">Serviços comunitários</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Conselhos, servidores da Comunhão e da Hospitalidade.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> O ano todo</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-menta">
+              <h4 class="text-xl font-extrabold">Mesa de Padrinhos</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Dois encontros para compartilhar com os padrinhos as vivências e os avanços da nossa comunidade.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Março / outubro</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-menta">
+              <h4 class="text-xl font-extrabold">Jornada de estudo</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espaço para estudar juntos e nos encontrar com Deus.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> O ano todo</p></div>
+            </article>
+          </div>
+        </div>
+
+        <!-- ANUNCIO -->
+        <div class="dimension" data-cat="anuncio">
+          <div class="flex items-center gap-3">
+            <span class="flex h-11 w-11 items-center justify-center rounded-full bg-ambar text-white"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i></span>
+            <h3 class="font-display uppercase tracking-tight text-2xl text-pizarra-oscuro">Anúncio</h3>
+          </div>
+          <p class="mt-3 max-w-3xl text-pizarra-oscuro/80">Espaços e atividades para ir ao encontro de quem não conhece Deus, está afastado ou começando seu caminho de fé.</p>
+          <div class="mt-5 flex gap-3 overflow-x-auto snap-x pb-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:pb-0">
+              <img src="../../../img/comunidad/anuncio-1.jpg" alt="Encontro de formação de jovens" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+              <img src="../../../img/comunidad/anuncio-2.jpg" alt="Grupo de missão" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+              <img src="../../../img/comunidad/anuncio-3.jpg" alt="Jovens da comunidade" loading="lazy" class="w-[78%] shrink-0 snap-start aspect-[4/3] object-cover rounded-2xl shadow-sm sm:w-auto" />
+            </div>
+          <div class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-ambar">
+              <h4 class="text-xl font-extrabold">Catequese Jovens</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Espaço de formação para jovens, especialmente para a Crisma.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> Maio / junho</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-ambar">
+              <h4 class="text-xl font-extrabold">Retiro Jordán</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Retiro de impacto para jovens que queiram viver um triplo encontro: com Jesus, consigo mesmos e com os outros.</p>
+              <div class="mt-auto"><p class="mt-4"><span class="inline-flex items-center gap-1.5 rounded-full bg-pizarra px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-white"><i class="fa-regular fa-clock" aria-hidden="true"></i> Em breve</span></p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-ambar">
+              <h4 class="text-xl font-extrabold">Alpha</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Um curso para buscar o sentido da fé.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> De março a julho</p></div>
+            </article>
+            <article class="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 border-t-8 border-ambar">
+              <h4 class="text-xl font-extrabold">Capela Santuário</h4>
+              <p class="mt-2 text-pizarra-oscuro/80">Dia de Carlo Acutis (dia 12 de cada mês), missa dos brasileiros, missa dos universitários e novenas.</p>
+              <div class="mt-auto"><p class="mt-4 text-sm font-bold text-pizarra"><i class="fa-regular fa-calendar mr-1" aria-hidden="true"></i> O ano todo</p></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="mt-10 text-center" id="verMasActWrap"><button id="verMasAct" type="button" class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-pizarra-oscuro shadow ring-1 ring-black/10 hover:bg-crema-oscuro transition" aria-expanded="false"></button></div>
+
+        <!-- Sacramentos (COMPLETAR requisitos y fechas) -->
+          <article class="rounded-3xl bg-pizarra p-6 sm:p-8 text-white shadow-sm">
+            <div class="grid gap-6 md:grid-cols-3">
+              <div>
+                <span class="text-xs font-extrabold uppercase tracking-wider text-agua-claro">Sacramentos</span>
+                <h3 class="mt-2 font-display uppercase tracking-tight text-3xl">Batismos, Crisma e casamentos</h3>
+              </div>
+              <ul class="md:col-span-2 grid gap-4 sm:grid-cols-3">
+                <li class="rounded-2xl bg-white/10 p-4"><i class="fa-solid fa-water text-xl text-agua-claro" aria-hidden="true"></i><p class="mt-2 font-bold">Batismos</p><p class="text-sm opacity-90">[Completar: datas e encontros de preparação]</p></li>
+                <li class="rounded-2xl bg-white/10 p-4"><i class="fa-solid fa-fire text-xl text-agua-claro" aria-hidden="true"></i><p class="mt-2 font-bold">Crisma</p><p class="text-sm opacity-90">A preparação é feita na <em>Catequese Jovens</em>.</p></li>
+                <li class="rounded-2xl bg-white/10 p-4"><i class="fa-solid fa-ring text-xl text-agua-claro" aria-hidden="true"></i><p class="mt-2 font-bold">Casamentos</p><p class="text-sm opacity-90">[Completar: requisitos e antecedência]</p></li>
+              </ul>
+            </div>
+            <a href="#contacto" class="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 font-bold text-pizarra-oscuro hover:bg-crema transition">Consulte a secretaria <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="valores" class="scroll-mt-20 relative overflow-hidden bg-agua py-20">
+      <div class="nube absolute -left-24 top-10 h-72 w-[36rem]" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- Valores -->
+        <div>
+          <div class="text-center max-w-2xl mx-auto">
+            <h2 class="font-display uppercase tracking-tight text-[2.1rem] leading-[1.05] sm:text-5xl lg:text-6xl text-pizarra">Nossos valores</h2>
+            <p class="mt-3 text-lg text-pizarra-oscuro">Gostamos de cuidar e transmitir em tudo o que fazemos um espírito <strong>criativo, profundo e misericordioso</strong>.</p>
+          </div>
+          <div class="mt-8 grid gap-6 md:grid-cols-3">
+            <article class="rounded-3xl bg-terracota p-7 text-white shadow-lg">
+              <h3 class="font-display uppercase tracking-tight text-3xl">Criatividade</h3>
+              <p class="mt-3 text-white/95">Convencidos de que Deus é sempre novo e de que Ele faz novas todas as coisas, nos animamos a renovar estruturas, estilos e linguagens para testemunhar uma Igreja mais viva e um Evangelho mais próximo.</p>
+            </article>
+            <article class="rounded-3xl bg-pizarra p-7 text-white shadow-lg">
+              <h3 class="font-display uppercase tracking-tight text-3xl">Profundidade</h3>
+              <p class="mt-3 text-white/95">Porque não podemos calar o que vimos e ouvimos, nos animamos a um vínculo muito profundo com Deus e com os outros, cultivando a interioridade e a fraternidade acima da indiferença e da superficialidade.</p>
+            </article>
+            <article class="rounded-3xl bg-white p-7 shadow-lg">
+              <h3 class="font-display uppercase tracking-tight text-3xl text-terracota">Misericórdia</h3>
+              <p class="mt-3 text-pizarra-oscuro/90">O amor de Deus sempre dá o primeiro passo. Assim tentamos amar como Ele, colocando-nos a serviço de todos, especialmente dos jovens e dos pobres, entregando-nos na santidade de cada dia e nos que mais sofrem.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>    <section id="horarios" class="scroll-mt-28 py-20 bg-crema">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="text-center max-w-2xl mx-auto">
+          <p class="font-script text-sm sm:text-xl text-terracota">esperamos você</p>
+          <h2 class="font-display uppercase tracking-tight text-[2.1rem] leading-[1.05] sm:text-5xl lg:text-6xl text-pizarra">Horários</h2>
+          <p class="mt-3 text-pizarra-oscuro/80">Missas, adoração eucarística, confissões e capela aberta.</p>
+        </header>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <article class="rounded-3xl bg-white shadow-sm ring-1 ring-black/5 overflow-hidden">
+            <h3 class="bg-pizarra px-6 py-4 font-extrabold uppercase tracking-wider text-white">Terça a sexta</h3>
+            <dl class="divide-y divide-crema-oscuro px-6">
+              <div class="py-4 flex gap-4"><dt class="w-8 text-terracota"><i class="fa-solid fa-church" aria-hidden="true"></i><span class="sr-only">Missas</span></dt>
+                <dd><span class="block text-xs font-bold uppercase tracking-wider text-pizarra">Missas</span><span class="text-2xl font-extrabold">12.15 · 19.30</span></dd></div>
+              <div class="py-4 flex gap-4"><dt class="w-8 text-oro"><i class="fa-solid fa-sun" aria-hidden="true"></i><span class="sr-only">Adoração</span></dt>
+                <dd><span class="block text-xs font-bold uppercase tracking-wider text-pizarra">Adoração eucarística</span><span class="font-semibold">11.00 às 12.00 · 18.30 às 19.30</span></dd></div>
+              <div class="py-4 flex gap-4"><dt class="w-8 text-malva"><i class="fa-solid fa-hands-praying" aria-hidden="true"></i><span class="sr-only">Confissões</span></dt>
+                <dd><span class="block text-xs font-bold uppercase tracking-wider text-pizarra">Confissões</span><span class="font-semibold">11.00 às 12.00 · 18.30 às 19.30</span></dd></div>
+              <div class="py-4 flex gap-4"><dt class="w-8 text-agua-oscuro"><i class="fa-solid fa-door-open" aria-hidden="true"></i><span class="sr-only">Capela aberta</span></dt>
+                <dd><span class="block text-xs font-bold uppercase tracking-wider text-pizarra">Capela aberta</span><span class="font-semibold">9.00 às 13.00 · 16.00 às 20.00</span></dd></div>
+            </dl>
+          </article>
+
+          <article class="rounded-3xl bg-white shadow-sm ring-1 ring-black/5 overflow-hidden">
+            <h3 class="bg-terracota px-6 py-4 font-extrabold uppercase tracking-wider text-white">Sábados</h3>
+            <dl class="divide-y divide-crema-oscuro px-6">
+              <div class="py-4 flex gap-4"><dt class="w-8 text-terracota"><i class="fa-solid fa-church" aria-hidden="true"></i><span class="sr-only">Missas</span></dt>
+                <dd><span class="block text-xs font-bold uppercase tracking-wider text-pizarra">Missa</span><span class="text-2xl font-extrabold">19.30</span></dd></div>
+              <div class="py-4 flex gap-4"><dt class="w-8 text-oro"><i class="fa-solid fa-sun" aria-hidden="true"></i><span class="sr-only">Adoração</span></dt>
+                <dd><span class="block text-xs font-bold uppercase tracking-wider text-pizarra">Adoração eucarística</span><span class="font-semibold">18.30 às 19.30</span></dd></div>
+              <div class="py-4 flex gap-4"><dt class="w-8 text-malva"><i class="fa-solid fa-hands-praying" aria-hidden="true"></i><span class="sr-only">Confissões</span></dt>
+                <dd><span class="block text-xs font-bold uppercase tracking-wider text-pizarra">Confissões</span><span class="font-semibold">18.30 às 19.30</span></dd></div>
+              <div class="py-4 flex gap-4"><dt class="w-8 text-agua-oscuro"><i class="fa-solid fa-door-open" aria-hidden="true"></i><span class="sr-only">Capela aberta</span></dt>
+                <dd><span class="block text-xs font-bold uppercase tracking-wider text-pizarra">Capela aberta</span><span class="font-semibold">17.00 às 21.00</span></dd></div>
+            </dl>
+          </article>
+
+          <article class="rounded-3xl bg-white shadow-sm ring-1 ring-black/5 overflow-hidden">
+            <h3 class="bg-agua-oscuro px-6 py-4 font-extrabold uppercase tracking-wider text-white">Domingos</h3>
+            <dl class="divide-y divide-crema-oscuro px-6">
+              <div class="py-4 flex gap-4"><dt class="w-8 text-terracota"><i class="fa-solid fa-church" aria-hidden="true"></i><span class="sr-only">Missas</span></dt>
+                <dd><span class="block text-xs font-bold uppercase tracking-wider text-pizarra">Missas</span><span class="text-2xl font-extrabold">12.15 · 19.30</span></dd></div>
+              <div class="py-4 flex gap-4"><dt class="w-8 text-oro"><i class="fa-solid fa-sun" aria-hidden="true"></i><span class="sr-only">Adoração</span></dt>
+                <dd><span class="block text-xs font-bold uppercase tracking-wider text-pizarra">Adoração eucarística</span><span class="font-semibold">11.00 às 12.00 · 18.30 às 19.30</span></dd></div>
+              <div class="py-4 flex gap-4"><dt class="w-8 text-malva"><i class="fa-solid fa-hands-praying" aria-hidden="true"></i><span class="sr-only">Confissões</span></dt>
+                <dd><span class="block text-xs font-bold uppercase tracking-wider text-pizarra">Confissões</span><span class="font-semibold">11.00 às 12.00 · 18.30 às 19.30</span></dd></div>
+              <div class="py-4 flex gap-4"><dt class="w-8 text-agua-oscuro"><i class="fa-solid fa-door-open" aria-hidden="true"></i><span class="sr-only">Capela aberta</span></dt>
+                <dd><span class="block text-xs font-bold uppercase tracking-wider text-pizarra">Capela aberta</span><span class="font-semibold">10.00 às 13.00 · 17.00 às 21.00</span></dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
+          <div class="rounded-2xl bg-agua-claro p-5 flex gap-4">
+            <i class="fa-regular fa-calendar-xmark text-xl text-pizarra mt-1" aria-hidden="true"></i>
+            <p><strong class="block">Segunda-feira</strong>A capela permanece fechada.</p>
+          </div>
+          <div class="rounded-2xl bg-agua-claro p-5 flex gap-4">
+            <i class="fa-solid fa-laptop text-xl text-oro mt-1" aria-hidden="true"></i>
+            <p><strong class="block">Dia de Carlo Acutis</strong>Todo dia 12, nas missas das 12.15 e das 19.30, com bênção especial.</p>
+          </div>
+          <div class="rounded-2xl bg-agua-claro p-5 flex gap-4">
+            <i class="fa-solid fa-file-signature text-xl text-terracota mt-1" aria-hidden="true"></i>
+            <!-- COMPLETAR: horario de secretaría parroquial -->
+            <p><strong class="block">Secretaria paroquial</strong>Horário: <em>[completar]</em>. Batismos, casamentos, certidões e dúvidas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <footer id="contacto" class="bg-pizarra-oscuro text-white">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
+      <div>
+        <img src="../../../img/logo.png" alt="" class="h-16 w-auto rounded-xl bg-white/90 p-1" />
+        <p class="mt-3 font-display uppercase tracking-wide">Paróquia San Lucas</p>
+        <p class="font-script text-sm leading-loose text-agua-claro">capela dos jovens</p>
+        <p class="mt-2 text-sm text-white/80">Seguimos Jesus no meio do mundo.</p>
+        <a href="https://www.instagram.com/parroquia.sanlucas/" target="_blank" rel="noopener" class="mt-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition" aria-label="Instagram da Paróquia San Lucas">
+          <i class="fa-brands fa-instagram text-2xl" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div>
+        <p class="text-sm font-bold uppercase tracking-wider text-agua-claro">Contato</p>
+        <dl class="mt-3 space-y-3 text-sm">
+          <div><dt class="text-white/60">Pároco</dt><dd class="font-semibold">Pe. Santiago María Obiglio</dd></div>
+          <div><dt class="text-white/60">Endereço</dt><dd>Paraguay 2150, Plaza Houssay · CABA<br /><a href="https://maps.app.goo.gl/1hrF257kr9DVHAkt8" target="_blank" rel="noopener" class="font-semibold underline underline-offset-4 hover:text-agua">Como chegar pelo Google Maps</a></dd></div>
+          <!-- COMPLETAR teléfono y mail -->
+          <div><dt class="text-white/60">Telefone / WhatsApp</dt><dd>[Completar telefone]</dd></div>
+          <div><dt class="text-white/60">E-mail</dt><dd><a href="mailto:parroquiasanlucasba@gmail.com" class="underline underline-offset-4 hover:text-agua-claro break-all">parroquiasanlucasba@gmail.com</a></dd></div>
+        </dl>
+        <a href="../../pt/colabora/#formulario" class="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-pizarra-oscuro hover:bg-crema transition"><i class="fa-regular fa-envelope" aria-hidden="true"></i> Envie uma mensagem</a>
+      </div>
+      <div>
+        <p class="text-sm font-bold uppercase tracking-wider text-agua-claro">Missas</p>
+        <ul class="mt-3 space-y-1 text-sm">
+          <li>Terça a sexta · 12.15 e 19.30</li>
+          <li>Sábados · 19.30</li>
+          <li>Domingos · 12.15 e 19.30</li>
+          <li>Segunda · fechado</li>
+        </ul>
+        <a href="../../pt/nosotros/#horarios" class="mt-3 inline-block text-sm font-semibold underline underline-offset-4 hover:text-agua">Ver todos os horários</a>
+      </div>
+      <div>
+        <iframe title="Mapa: Paróquia Universitária San Lucas, Paraguay 2150"
+          src="https://www.google.com/maps?q=Parroquia+Universitaria+San+Lucas,+Paraguay+2150,+Buenos+Aires&ll=-34.5990275,-58.398112&z=16&output=embed"
+          class="h-48 w-full rounded-2xl border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="border-t border-white/15 py-5 text-center text-xs text-white/70">
+      © <span id="anio">2026</span> Paróquia San Lucas · Arquidiocese de Buenos Aires. Todos os direitos reservados.
+    </div>
+  </footer>
+  <script src="../../../js/sitio.js"></script>
+</body>
+</html>

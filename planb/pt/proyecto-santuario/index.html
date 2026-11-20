@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth" data-root="../../../">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto Santuário · Paróquia San Lucas</title>
+  <meta name="description" content="Paróquia San Lucas, capela dos jovens com 150 anos na Plaza Houssay (Paraguay 2150, Buenos Aires). Horários, atividades, santos jovens, loja pastoral e como colaborar." />
+  <meta name="theme-color" content="#8EC5C2" />
+  <link rel="alternate" hreflang="es-AR" href="../../proyecto-santuario/" />
+  <link rel="alternate" hreflang="pt-BR" href="../../pt/proyecto-santuario/" />
+  <link rel="icon" type="image/png" href="../../../img/logo.png" />
+  <link rel="preload" href="../../../fonts/aileron-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../../../css/estilos-planb.css" />
+  <meta name="robots" content="noindex" />
+</head>
+<body class="bg-crema text-pizarra-oscuro font-sans antialiased">
+
+  <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] bg-terracota text-white px-4 py-2 rounded-lg">Ir para o conteúdo</a>
+  <header id="header" class="fixed inset-x-0 top-0 z-50 bg-crema/95 backdrop-blur transition-shadow">
+    <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8" aria-label="Navegação principal">
+      <a href="../../pt/" class="flex min-w-0 items-center gap-3" aria-label="Paróquia San Lucas, ir para o início">
+        <img src="../../../img/logo.png" alt="" class="h-14 w-auto shrink-0" />
+        <span class="min-w-0 leading-tight">
+          <span class="block whitespace-nowrap font-display text-[13px] uppercase tracking-wide sm:text-base">Paróquia San Lucas</span>
+          <span class="block font-script text-[11px] leading-loose sm:text-sm">capela dos jovens</span>
+        </span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-6 whitespace-nowrap text-sm font-semibold"><li><a href="../../pt/nosotros/" class="hover:text-terracota transition">Quem somos</a></li><li><a href="../../pt/proyecto-santuario/" class="text-terracota transition" aria-current="page">Projeto Santuário</a></li><li><a href="../../pt/tienda/" class="hover:text-terracota transition">Loja Pastoral</a></li><li><a href="../../pt/colabora/" class="hover:text-terracota transition">Colabore</a></li></ul>
+      <div class="flex shrink-0 items-center gap-1 sm:gap-2">
+        <a href="../../pt/nosotros/#horarios" class="flex h-11 w-11 items-center justify-center rounded-full bg-terracota text-white shadow hover:bg-terracota-oscuro transition" aria-label="Horários das Missas" title="Horários das Missas">
+          <i class="fa-regular fa-clock text-lg" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/parroquia.sanlucas/" target="_blank" rel="noopener" class="hidden h-11 w-11 items-center justify-center rounded-full text-pizarra-oscuro hover:bg-white sm:flex" aria-label="Instagram da Paróquia San Lucas" title="Instagram">
+          <i class="fa-brands fa-instagram text-2xl" aria-hidden="true"></i>
+        </a>
+        <button id="menuBtn" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full text-pizarra-oscuro hover:bg-white" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+          <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+    <div id="menu" class="absolute right-2 top-20 w-[min(22rem,calc(100vw-1rem))] sm:right-6 lg:right-8" hidden>
+      <div class="max-h-[calc(100dvh-6rem)] overflow-y-auto rounded-2xl bg-white p-3 shadow-2xl ring-1 ring-black/5">
+        <ul class="font-semibold">
+          <li><a href="../../pt/" class="block rounded-lg px-4 py-3 hover:bg-crema">Início</a></li>
+          <li><a href="../../pt/nosotros/" class="block rounded-lg px-4 py-3 hover:bg-crema">Quem somos</a>
+            <ul class="mb-1 ml-4 border-l-2 border-agua pl-2 text-sm font-medium text-pizarra-oscuro/80">
+              <li><a href="../../pt/nosotros/#actividades" class="block rounded-lg px-3 py-2 hover:bg-crema">O que fazemos</a></li>
+              <li><a href="../../pt/nosotros/#horarios" class="block rounded-lg px-3 py-2 hover:bg-crema">Horários</a></li>
+            </ul></li>
+          <li><a href="../../pt/proyecto-santuario/" class="block rounded-lg px-4 py-3 hover:bg-crema">Projeto Santuário</a>
+            <ul class="mb-1 ml-4 border-l-2 border-agua pl-2 text-sm font-medium text-pizarra-oscuro/80">
+              <li><a href="../../pt/proyecto-santuario/#santos" class="block rounded-lg px-3 py-2 hover:bg-crema">Santos jovens</a></li>
+            </ul></li>
+          <li><a href="../../pt/tienda/" class="block rounded-lg px-4 py-3 hover:bg-crema">Loja Pastoral</a></li>
+          <li><a href="../../pt/colabora/" class="block rounded-lg px-4 py-3 hover:bg-crema">Colabore</a></li>
+        </ul>
+        <div class="mt-2 flex items-center justify-between border-t border-black/5 pt-2">
+          <a href="../../proyecto-santuario/" class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm text-pizarra-oscuro/70 hover:bg-crema" hreflang="es-AR"><span class="block h-6 w-6 overflow-hidden rounded-full ring-1 ring-black/10"><svg viewBox="0 0 100 100" class="h-full w-full" aria-hidden="true"><rect width="100" height="100" fill="#74ACDF"/><rect y="33.3" width="100" height="33.4" fill="#fff"/><circle cx="50" cy="50" r="9" fill="#F6B40E"/></svg></span>Ver en español</a>
+          <a href="https://www.instagram.com/parroquia.sanlucas/" target="_blank" rel="noopener" class="mr-2 flex h-10 w-10 items-center justify-center rounded-full hover:bg-crema" aria-label="Instagram da Paróquia San Lucas"><i class="fa-brands fa-instagram text-xl" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="contenido">
+    <section class="relative overflow-hidden bg-agua pt-32 pb-12 sm:pt-36">
+      <div class="nube absolute -left-24 top-10 h-72 w-[36rem]" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+        <p class="font-script text-lg leading-loose text-pizarra-oscuro sm:text-xl">sonhamos juntos</p>
+        <h1 class="font-display uppercase tracking-tight text-[2.4rem] leading-[1] text-terracota sm:text-6xl lg:text-7xl">Projeto Santuário</h1>
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-pizarra-oscuro/90">Caminho rumo aos 150 anos</p>
+        <div class="mt-7 flex flex-wrap justify-center gap-2"><a href="#proyecto" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">O projeto</a><a href="#santos" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Santos jovens</a><a href="#camino" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Caminho rumo aos 150 anos</a></div>
+      </div>
+    </section>
+    <section id="proyecto" class="scroll-mt-20 bg-white py-16 sm:py-24">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <p class="max-w-5xl font-display text-2xl leading-snug text-pizarra-oscuro sm:text-3xl lg:text-[2.6rem] lg:leading-tight">Um <span class="text-terracota">“santuário”</span> é um lugar sagrado para onde peregrinamos. Caminhamos buscando ou celebrando uma graça, e voltamos transformados pelo encontro e pelo caminho; enviados ao mundo cotidiano com força nova.</p>
+        <div class="mt-10 grid gap-6 text-lg text-pizarra-oscuro/90 lg:grid-cols-2 lg:gap-12">
+          <div class="space-y-5">
+            <p>Nossa vocação de “paróquia universitária” nos move especialmente entre os jovens. Descobrimos neles uma forte presença de Deus, refletida nas histórias dos santos jovens e oferecida a todos na aventura espiritual de suas buscas.</p>
+            <p class="rounded-3xl bg-agua-claro p-6 text-pizarra-oscuro">Por tudo isso, sonhamos com um <strong>“santuário de jovens”</strong>: colocar-nos em movimento, despertar buscas, acompanhar caminhos, gerar encontros e enviar ao serviço e ao louvor no dia a dia.</p>
+          </div>
+          <div class="space-y-5">
+            <p><strong>É para isso que te convidamos!</strong> Que você venha, peregrine, se entusiasme com a alegria dos jovens e se comova e se comprometa com suas feridas. Porque a voz de Jesus, no meio da nossa cidade, continua dizendo: <strong>“Jovem, levanta-te!”</strong> (Lc 7, 14).</p>
+            <p>Tomara que você descubra logo que <strong>“Ele vive e te quer vivo!”</strong> (Christus Vivit 1).</p>
+          </div>
+        </div>
+
+        <!-- POEMA "El Peregrino" (Mamerto Menapace): pegar el texto dentro del div poema-texto, una linea por renglon. El bloque aparece solo cuando tiene texto. -->
+        <figure class="poema mx-auto mt-12 max-w-3xl rounded-3xl border-l-8 border-agua bg-crema p-6 sm:p-8" hidden>
+          <div class="poema-texto whitespace-pre-line font-script text-lg leading-loose text-pizarra-oscuro"></div>
+          <figcaption class="mt-4 text-sm font-bold uppercase tracking-wider text-pizarra">O Peregrino — Mamerto Menapace</figcaption>
+        </figure>
+      </div>
+    </section>    <section id="santos" class="scroll-mt-20 py-20 bg-pizarra-oscuro text-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="text-center max-w-2xl mx-auto">
+          <p class="font-script text-sm sm:text-xl text-agua">nossos amigos do céu</p>
+          <h2 class="font-display uppercase tracking-tight text-[2.1rem] leading-[1.05] sm:text-5xl lg:text-6xl">Santos jovens</h2>
+          <p class="mt-3 text-white/85">Veneramos em nossa capela as histórias de muitos jovens já proclamados santos, beatos ou a caminho: “veneráveis”, “servos de Deus”. <strong>Aproveite o presente da sua amizade e intercessão!</strong> Você pode vir visitá-los ou encontrar mais material sobre eles aproximando-se da paróquia.</p>
+          <p class="mt-2 text-sm font-semibold text-agua"><i class="fa-regular fa-hand-pointer mr-1" aria-hidden="true"></i> Toque em cada um para conhecer a sua história.</p>
+        </header>
+
+                <ul id="santosLista" class="mt-12 grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+          <li class="santo" data-foto="carlo-acutis" data-cita="A Eucaristia é a minha autoestrada para o céu." data-bio="Um jovem italiano apaixonado por Jesus e pela Eucaristia. Fascinado por informática, descobriu que também a partir da vida cotidiana e da tecnologia podia anunciar Deus. Morreu aos 15 anos, deixando uma frase: «A Eucaristia é a minha autoestrada para o céu»."><span class="titulo">São</span><span class="nombre">Carlo Acutis</span></li>
+          <li class="santo" data-foto="pier-giorgio-frassati" data-cita="Para o alto!" data-bio="Um jovem italiano alegre, alpinista, esportista e amigo dos seus amigos. Viveu sua fé servindo silenciosamente os pobres e buscando sempre as alturas, também as do espírito. Morreu aos 24 anos."><span class="titulo">São</span><span class="nombre">Pier Giorgio Frassati</span></li>
+          <li class="santo" data-foto="teresita" data-cita="No coração da Igreja, minha Mãe, eu serei o amor." data-bio="Uma jovem francesa que entrou no Carmelo aos 15 anos. Descobriu que a santidade não consiste em fazer coisas extraordinárias, mas em fazer as pequenas coisas com um amor imenso. Morreu aos 24 anos e hoje é doutora da Igreja."><span class="titulo">Santa</span><span class="nombre">Teresinha do Menino Jesus</span></li>
+          <li class="santo" data-foto="rafael-arnaiz" data-cita="Só Deus!" data-bio="Conhecido como Irmão Rafael, foi um jovem espanhol que deixou uma vida confortável e seus estudos de arquitetura para se entregar a Deus num mosteiro trapista. Viveu a doença e o sofrimento com profunda alegria, simplicidade e amor a Cristo. Morreu aos 27 anos e foi canonizado por Bento XVI em 2009."><span class="titulo">São</span><span class="nombre">Rafael Arnáiz Barón</span></li>
+          <li class="santo" data-foto="ceferino-namuncura" data-cita="Quero estudar para ser útil ao meu povo." data-bio="Um jovem argentino de origem mapuche, nascido na Patagônia. Sonhava ser sacerdote para servir o seu povo e aproximá-lo de Jesus. Morreu aos 18 anos, depois de viver uma fé simples, generosa e profundamente missionária."><span class="titulo">Beato</span><span class="nombre">Ceferino Namuncurá</span></li>
+          <li class="santo" data-foto="chiara-luce-badano" data-cita="Se Tu o queres, Jesus, eu também o quero." data-bio="Uma jovem italiana cheia de alegria, amiga do esporte e da vida. Aos 17 anos ficou gravemente doente e viveu o seu sofrimento com uma confiança extraordinária em Jesus. Morreu aos 18 anos, deixando uma luz que continua iluminando muitos jovens."><span class="titulo">Beata</span><span class="nombre">Chiara Luce Badano</span></li>
+          <li class="santo" data-foto="guido-schaffer" data-cita="Jesus, ajuda-me a cuidar dos pobres." data-bio="Um jovem brasileiro, médico, surfista e seminarista. Encontrava Jesus tanto na oração como no mar e no serviço aos doentes e aos pobres. Morreu aos 35 anos enquanto surfava, deixando o testemunho de uma vida entregue a Deus."><span class="titulo">Venerável</span><span class="nombre">Guido Schäffer</span></li>
+          <li class="santo" data-foto="chiara-corbella" data-cita="O objetivo da nossa vida é amar e estar sempre dispostos a aprender a amar." data-bio="Uma jovem de Roma, alegre e apaixonada pela vida, que se casou com Enrico e viveu com ele uma fé simples e luminosa. Acompanhou com amor seus dois primeiros filhos, que viveram apenas alguns minutos, e em sua terceira gravidez descobriram um câncer: adiou o tratamento para cuidar da vida de seu filho Francesco. Morreu aos 28 anos, deixando um testemunho de alegria e confiança total em Deus."><span class="titulo">Serva de Deus</span><span class="nombre">Chiara Corbella</span></li>
+          <li class="santo" data-foto="clarita-segura" data-cita="Meu Deus, Tu és o melhor da minha vida." data-bio="Uma adolescente argentina, alegre, generosa e de caráter decidido. Sonhava casar e formar uma família, e viveu a sua amizade com Jesus nas coisas simples de cada dia. Morreu aos 17 anos, deixando o testemunho de uma santidade possível no cotidiano."><span class="titulo">Serva de Deus</span><span class="nombre">Clarita Segura</span></li>
+          <li class="santo" data-foto="guillermo-muzzio" data-cita="Fazer a vontade de Deus e ser feliz é a mesma coisa." data-bio="Um jovem seminarista argentino, conhecido como Willy, que descobriu sua vocação entre amigos, acampamentos e missões. Depois de um grave acidente, viveu anos de dor sem perder a alegria nem a confiança em Deus. Morreu aos 30 anos."><span class="titulo">Servo de Deus</span><span class="nombre">Guillermo Muzzio</span></li>
+          <li class="santo" data-foto="hna-claire" data-cita="A única maneira de eu consolar o que via na cruz era com a minha vida." data-bio="Uma jovem irlandesa que sonhava ser uma atriz famosa. Um encontro com Jesus crucificado mudou a sua vida e ela decidiu entregá-la por completo. Religiosa alegre, divertida e apaixonada, morreu aos 33 anos num terremoto no Equador."><span class="titulo">Serva de Deus</span><span class="nombre">Ir. Clare Crockett</span></li>
+        </ul>
+      </div>
+    </section>
+
+    
+    <!-- Ficha de cada santo (se abre al tocar) -->
+    <div id="ficha" class="fixed inset-0 z-[60] flex items-end justify-center bg-black/60 sm:items-center sm:p-4" role="dialog" aria-modal="true" aria-labelledby="fichaNombre" hidden>
+      <div class="relative max-h-[92vh] w-full max-w-lg overflow-y-auto rounded-t-3xl bg-crema text-pizarra-oscuro shadow-2xl sm:rounded-3xl">
+        <button id="fichaCerrar" type="button" class="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-pizarra-oscuro shadow" aria-label="Fechar"><i class="fa-solid fa-xmark text-lg" aria-hidden="true"></i></button>
+        <div class="bg-pizarra-oscuro px-6 pb-16 pt-8 text-center text-white">
+          <p id="fichaTitulo" class="text-xs font-bold uppercase tracking-[0.25em] text-agua"></p>
+          <h3 id="fichaNombre" class="mt-1 font-display text-2xl uppercase tracking-tight sm:text-3xl"></h3>
+        </div>
+        <div id="fichaFoto" class="relative mx-auto -mt-14 h-28 w-28 overflow-hidden rounded-full bg-terracota ring-4 ring-crema"></div>
+        <div class="px-6 pb-4 pt-5 sm:px-8">
+          <p id="fichaBio" class="leading-relaxed"></p>
+          <blockquote id="fichaCita" class="mt-5 rounded-2xl bg-white p-4 text-center font-script text-base leading-loose text-terracota shadow-sm"></blockquote>
+        </div>
+        <div class="sticky bottom-0 flex items-center justify-between gap-3 border-t border-black/5 bg-crema/95 px-4 py-3 backdrop-blur">
+          <button id="fichaAnt" type="button" class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-bold shadow-sm ring-1 ring-black/10 hover:bg-crema-oscuro"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Anterior</button>
+          <span id="fichaNum" class="text-sm font-semibold text-pizarra-oscuro/60"></span>
+          <button id="fichaSig" type="button" class="inline-flex items-center gap-2 rounded-full bg-pizarra px-4 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-pizarra-oscuro">Próximo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <section id="camino" class="scroll-mt-20 relative overflow-hidden bg-crema py-16 sm:py-20">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <header class="text-center">
+          <p class="font-script text-sm text-terracota sm:text-xl">1881 – 2031</p>
+          <h2 class="font-display uppercase tracking-tight text-[2.1rem] leading-[1.05] text-pizarra sm:text-5xl lg:text-6xl">Caminho rumo aos 150 anos</h2>
+        </header>
+        <div class="mt-10 grid gap-8 md:grid-cols-5 md:items-center">
+          <div class="space-y-5 text-lg text-pizarra-oscuro/90 md:col-span-3">
+            <p>Nossa capela foi construída no ano de <strong>1881</strong>, fazendo parte do primeiro Hospital de Clínicas no início e dedicada, nesta segunda etapa, à pastoral dos jovens e da universidade. Assim se aproxima <strong>2031</strong>, ano em que celebraremos o 150º aniversário.</p>
+            <p>Queremos nos preparar para esta grande festa por meio de um caminho <strong>espiritual, edilício e missionário</strong>, que está em construção! Estamos rezando, discernindo e trabalhando no projeto… em breve poderemos compartilhar mais detalhes.</p>
+          </div>
+          <div class="md:col-span-2">
+          <div class="rounded-3xl bg-pizarra p-7 text-center text-white shadow-lg">
+            <span class="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest"><i class="fa-regular fa-clock" aria-hidden="true"></i> Em breve</span>
+            <p class="mt-4 font-display text-xl uppercase tracking-tight sm:text-2xl">O caminho 2027 – 2031</p>
+            <ul class="mt-4 flex flex-wrap justify-center gap-2 text-sm font-bold">
+              <li class="rounded-full bg-white/10 px-3 py-1.5">Espiritual</li>
+              <li class="rounded-full bg-white/10 px-3 py-1.5">Edilício</li>
+              <li class="rounded-full bg-white/10 px-3 py-1.5">Missionário</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+        <div class="mt-10 grid gap-6 sm:grid-cols-2">
+          <figure class="overflow-hidden rounded-3xl bg-white shadow-lg">
+            <img src="../../../img/historia/capilla-1884.jpg" alt="A capela em 1884, quando fazia parte do primeiro Hospital de Clínicas" loading="lazy" class="aspect-[4/3] w-full object-cover sepia-[.35]" />
+            <figcaption class="px-5 py-3 text-sm text-pizarra-oscuro"><strong>1884.</strong> A capela, quando fazia parte do primeiro Hospital de Clínicas.</figcaption>
+          </figure>
+          <figure class="overflow-hidden rounded-3xl bg-white shadow-lg">
+            <img src="../../../img/historia/capilla-1974.jpg" alt="A capela em 1974, cercada pelos prédios do bairro" loading="lazy" class="aspect-[4/3] w-full object-cover sepia-[.35]" />
+            <figcaption class="px-5 py-3 text-sm text-pizarra-oscuro"><strong>1974.</strong> A capela, já cercada pela cidade.</figcaption>
+          </figure>
+        </div>
+        <div class="mt-10 rounded-3xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5 sm:p-8">
+          <p class="text-lg text-pizarra-oscuro">Contamos com <strong>sua oração, suas ideias e seus comentários</strong>.</p>
+          <a href="../../pt/colabora/#formulario" class="mt-4 inline-flex items-center gap-2 rounded-full bg-terracota px-6 py-3 font-bold text-white shadow hover:bg-terracota-oscuro transition">Escreva para nós <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto" class="bg-pizarra-oscuro text-white">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
+      <div>
+        <img src="../../../img/logo.png" alt="" class="h-16 w-auto rounded-xl bg-white/90 p-1" />
+        <p class="mt-3 font-display uppercase tracking-wide">Paróquia San Lucas</p>
+        <p class="font-script text-sm leading-loose text-agua-claro">capela dos jovens</p>
+        <p class="mt-2 text-sm text-white/80">Seguimos Jesus no meio do mundo.</p>
+        <a href="https://www.instagram.com/parroquia.sanlucas/" target="_blank" rel="noopener" class="mt-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition" aria-label="Instagram da Paróquia San Lucas">
+          <i class="fa-brands fa-instagram text-2xl" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div>
+        <p class="text-sm font-bold uppercase tracking-wider text-agua-claro">Contato</p>
+        <dl class="mt-3 space-y-3 text-sm">
+          <div><dt class="text-white/60">Pároco</dt><dd class="font-semibold">Pe. Santiago María Obiglio</dd></div>
+          <div><dt class="text-white/60">Endereço</dt><dd>Paraguay 2150, Plaza Houssay · CABA<br /><a href="https://maps.app.goo.gl/1hrF257kr9DVHAkt8" target="_blank" rel="noopener" class="font-semibold underline underline-offset-4 hover:text-agua">Como chegar pelo Google Maps</a></dd></div>
+          <!-- COMPLETAR teléfono y mail -->
+          <div><dt class="text-white/60">Telefone / WhatsApp</dt><dd>[Completar telefone]</dd></div>
+          <div><dt class="text-white/60">E-mail</dt><dd><a href="mailto:parroquiasanlucasba@gmail.com" class="underline underline-offset-4 hover:text-agua-claro break-all">parroquiasanlucasba@gmail.com</a></dd></div>
+        </dl>
+        <a href="../../pt/colabora/#formulario" class="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-pizarra-oscuro hover:bg-crema transition"><i class="fa-regular fa-envelope" aria-hidden="true"></i> Envie uma mensagem</a>
+      </div>
+      <div>
+        <p class="text-sm font-bold uppercase tracking-wider text-agua-claro">Missas</p>
+        <ul class="mt-3 space-y-1 text-sm">
+          <li>Terça a sexta · 12.15 e 19.30</li>
+          <li>Sábados · 19.30</li>
+          <li>Domingos · 12.15 e 19.30</li>
+          <li>Segunda · fechado</li>
+        </ul>
+        <a href="../../pt/nosotros/#horarios" class="mt-3 inline-block text-sm font-semibold underline underline-offset-4 hover:text-agua">Ver todos os horários</a>
+      </div>
+      <div>
+        <iframe title="Mapa: Paróquia Universitária San Lucas, Paraguay 2150"
+          src="https://www.google.com/maps?q=Parroquia+Universitaria+San+Lucas,+Paraguay+2150,+Buenos+Aires&ll=-34.5990275,-58.398112&z=16&output=embed"
+          class="h-48 w-full rounded-2xl border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="border-t border-white/15 py-5 text-center text-xs text-white/70">
+      © <span id="anio">2026</span> Paróquia San Lucas · Arquidiocese de Buenos Aires. Todos os direitos reservados.
+    </div>
+  </footer>
+  <script src="../../../js/sitio.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth" data-root="../../../">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colabore · Paróquia San Lucas</title>
+  <meta name="description" content="Paróquia San Lucas, capela dos jovens com 150 anos na Plaza Houssay (Paraguay 2150, Buenos Aires). Horários, atividades, santos jovens, loja pastoral e como colaborar." />
+  <meta name="theme-color" content="#8EC5C2" />
+  <link rel="alternate" hreflang="es-AR" href="../../colabora/" />
+  <link rel="alternate" hreflang="pt-BR" href="../../pt/colabora/" />
+  <link rel="icon" type="image/png" href="../../../img/logo.png" />
+  <link rel="preload" href="../../../fonts/aileron-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../../../css/estilos-planb.css" />
+  <meta name="robots" content="noindex" />
+</head>
+<body class="bg-crema text-pizarra-oscuro font-sans antialiased">
+
+  <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] bg-terracota text-white px-4 py-2 rounded-lg">Ir para o conteúdo</a>
+  <header id="header" class="fixed inset-x-0 top-0 z-50 bg-crema/95 backdrop-blur transition-shadow">
+    <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8" aria-label="Navegação principal">
+      <a href="../../pt/" class="flex min-w-0 items-center gap-3" aria-label="Paróquia San Lucas, ir para o início">
+        <img src="../../../img/logo.png" alt="" class="h-14 w-auto shrink-0" />
+        <span class="min-w-0 leading-tight">
+          <span class="block whitespace-nowrap font-display text-[13px] uppercase tracking-wide sm:text-base">Paróquia San Lucas</span>
+          <span class="block font-script text-[11px] leading-loose sm:text-sm">capela dos jovens</span>
+        </span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-6 whitespace-nowrap text-sm font-semibold"><li><a href="../../pt/nosotros/" class="hover:text-terracota transition">Quem somos</a></li><li><a href="../../pt/proyecto-santuario/" class="hover:text-terracota transition">Projeto Santuário</a></li><li><a href="../../pt/tienda/" class="hover:text-terracota transition">Loja Pastoral</a></li><li><a href="../../pt/colabora/" class="text-terracota transition" aria-current="page">Colabore</a></li></ul>
+      <div class="flex shrink-0 items-center gap-1 sm:gap-2">
+        <a href="../../pt/nosotros/#horarios" class="flex h-11 w-11 items-center justify-center rounded-full bg-terracota text-white shadow hover:bg-terracota-oscuro transition" aria-label="Horários das Missas" title="Horários das Missas">
+          <i class="fa-regular fa-clock text-lg" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/parroquia.sanlucas/" target="_blank" rel="noopener" class="hidden h-11 w-11 items-center justify-center rounded-full text-pizarra-oscuro hover:bg-white sm:flex" aria-label="Instagram da Paróquia San Lucas" title="Instagram">
+          <i class="fa-brands fa-instagram text-2xl" aria-hidden="true"></i>
+        </a>
+        <button id="menuBtn" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full text-pizarra-oscuro hover:bg-white" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+          <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+    <div id="menu" class="absolute right-2 top-20 w-[min(22rem,calc(100vw-1rem))] sm:right-6 lg:right-8" hidden>
+      <div class="max-h-[calc(100dvh-6rem)] overflow-y-auto rounded-2xl bg-white p-3 shadow-2xl ring-1 ring-black/5">
+        <ul class="font-semibold">
+          <li><a href="../../pt/" class="block rounded-lg px-4 py-3 hover:bg-crema">Início</a></li>
+          <li><a href="../../pt/nosotros/" class="block rounded-lg px-4 py-3 hover:bg-crema">Quem somos</a>
+            <ul class="mb-1 ml-4 border-l-2 border-agua pl-2 text-sm font-medium text-pizarra-oscuro/80">
+              <li><a href="../../pt/nosotros/#actividades" class="block rounded-lg px-3 py-2 hover:bg-crema">O que fazemos</a></li>
+              <li><a href="../../pt/nosotros/#horarios" class="block rounded-lg px-3 py-2 hover:bg-crema">Horários</a></li>
+            </ul></li>
+          <li><a href="../../pt/proyecto-santuario/" class="block rounded-lg px-4 py-3 hover:bg-crema">Projeto Santuário</a>
+            <ul class="mb-1 ml-4 border-l-2 border-agua pl-2 text-sm font-medium text-pizarra-oscuro/80">
+              <li><a href="../../pt/proyecto-santuario/#santos" class="block rounded-lg px-3 py-2 hover:bg-crema">Santos jovens</a></li>
+            </ul></li>
+          <li><a href="../../pt/tienda/" class="block rounded-lg px-4 py-3 hover:bg-crema">Loja Pastoral</a></li>
+          <li><a href="../../pt/colabora/" class="block rounded-lg px-4 py-3 hover:bg-crema">Colabore</a></li>
+        </ul>
+        <div class="mt-2 flex items-center justify-between border-t border-black/5 pt-2">
+          <a href="../../colabora/" class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm text-pizarra-oscuro/70 hover:bg-crema" hreflang="es-AR"><span class="block h-6 w-6 overflow-hidden rounded-full ring-1 ring-black/10"><svg viewBox="0 0 100 100" class="h-full w-full" aria-hidden="true"><rect width="100" height="100" fill="#74ACDF"/><rect y="33.3" width="100" height="33.4" fill="#fff"/><circle cx="50" cy="50" r="9" fill="#F6B40E"/></svg></span>Ver en español</a>
+          <a href="https://www.instagram.com/parroquia.sanlucas/" target="_blank" rel="noopener" class="mr-2 flex h-10 w-10 items-center justify-center rounded-full hover:bg-crema" aria-label="Instagram da Paróquia San Lucas"><i class="fa-brands fa-instagram text-xl" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="contenido">
+    <section class="relative overflow-hidden bg-agua pt-32 pb-12 sm:pt-36">
+      <div class="nube absolute -left-24 top-10 h-72 w-[36rem]" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+        <p class="font-script text-lg leading-loose text-pizarra-oscuro sm:text-xl">ajude-nos</p>
+        <h1 class="font-display uppercase tracking-tight text-[2.4rem] leading-[1] text-terracota sm:text-6xl lg:text-7xl">Colabore conosco</h1>
+        
+        <div class="mt-7 flex flex-wrap justify-center gap-2"><a href="#dones" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Com seus dons</a><a href="#manos" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Com suas mãos</a><a href="#aporte" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Com sua contribuição</a><a href="#formulario" class="rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-pizarra-oscuro shadow-sm hover:bg-white transition">Escreva para nós</a></div>
+      </div>
+    </section>
+    <section id="colaborar" class="scroll-mt-24 bg-white py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="mx-auto max-w-2xl text-center">
+          <p class="text-lg text-pizarra-oscuro/90">A capela se sustenta graças a quem a sente como sua casa. Você pode colaborar de muitas maneiras: <strong>com seus dons, com suas mãos e com sua contribuição</strong>.</p>
+        </header>
+        <div class="mt-12 grid gap-6 lg:grid-cols-3">
+          <article id="dones" class="scroll-mt-28 flex flex-col rounded-3xl bg-agua-claro p-7">
+            <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white text-2xl text-agua-oscuro shadow-sm"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></span>
+            <h2 class="mt-5 font-display text-2xl uppercase tracking-tight text-pizarra-oscuro">Com seus dons</h2>
+            <p class="mt-3 text-pizarra-oscuro/85">Você entende de design, faz cerâmica, tira boas fotos ou cozinha bem? Ou talvez tenha alguma profissão: arquitetura, paisagismo, marcenaria, advocacia? Tudo o que você sabe fazer pode ser colocado a serviço da comunidade!</p>
+            <a href="#formulario" data-opcion="3" class="motivo mt-auto pt-6 font-bold text-pizarra-oscuro"><span class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 shadow-sm hover:bg-crema transition">Oferecer meus dons <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i></span></a>
+          </article>
+          <article id="manos" class="scroll-mt-28 flex flex-col rounded-3xl bg-crema p-7">
+            <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white text-2xl text-terracota shadow-sm"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i></span>
+            <h2 class="mt-5 font-display text-2xl uppercase tracking-tight text-pizarra-oscuro">Com suas mãos</h2>
+            <p class="mt-3 text-pizarra-oscuro/85">Você se interessa por algum dos nossos voluntariados? A Mesa Aberta (refeição com pessoas em situação de rua), Tepeyac (jardinagem e manutenção da capela), Gólgota (para homens, visita ao centro de detenção de menores) ou Samaría (visita aos doentes do Hospital de Clínicas). Contamos com você!</p>
+            <div class="mt-auto flex flex-wrap gap-2 pt-6 font-bold text-pizarra-oscuro">
+              <a href="#formulario" data-opcion="4" class="motivo inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 shadow-sm hover:bg-crema-oscuro transition">Quero participar <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i></a>
+              <a href="../../pt/nosotros/#actividades" class="inline-flex items-center gap-2 rounded-full px-4 py-2.5 underline underline-offset-4 hover:text-terracota">Ver os serviços</a>
+            </div>
+          </article>
+          <article id="aporte" class="scroll-mt-28 flex flex-col rounded-3xl bg-pizarra p-7 text-white">
+            <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white text-2xl text-terracota shadow-sm"><i class="fa-solid fa-heart" aria-hidden="true"></i></span>
+            <h2 class="mt-5 font-display text-2xl uppercase tracking-tight">Com sua contribuição</h2>
+            <p class="mt-3 text-white/90">A paróquia e a nossa missão se mantêm totalmente graças às doações particulares. <strong>Toda contribuição é providência para nós!</strong> Você pode fazer sua doação voluntária ou se tornar padrinho com uma contribuição mensal. Obrigado pela sua generosidade!</p>
+            <div class="mt-auto space-y-3 pt-6">
+              <a href="https://link.mercadopago.com.ar/parroquiasanlucas" target="_blank" rel="noopener" class="flex w-full items-center justify-center gap-2 rounded-full bg-white px-5 py-3.5 text-center font-extrabold text-pizarra-oscuro shadow-lg hover:bg-crema transition"><i class="fa-solid fa-heart text-terracota" aria-hidden="true"></i> Doar pelo Mercado Pago</a>
+              <!-- COMPLETAR: alias real para transferencias -->
+              <button type="button" class="copiar flex w-full items-center justify-center gap-2 rounded-full bg-white px-5 py-3.5 text-center font-extrabold text-pizarra-oscuro shadow-lg hover:bg-crema transition flex-col !gap-0" data-copiar="alias"><span class="flex items-center gap-2"><i class="fa-solid fa-building-columns text-terracota" aria-hidden="true"></i> Alias para transferência</span><span id="alias" class="mt-0.5 font-mono text-sm font-bold text-pizarra">PARROQUIA.SANLUCAS.XXX</span></button>
+              <a href="#formulario" data-opcion="6" class="motivo flex w-full items-center justify-center gap-2 rounded-full bg-white px-5 py-3.5 text-center font-extrabold text-pizarra-oscuro shadow-lg hover:bg-crema transition"><i class="fa-solid fa-hand-holding-heart text-terracota" aria-hidden="true"></i> Quero ser padrinho</a>
+              <p id="copiadoMsg" class="h-5 text-center text-sm font-semibold text-white" role="status" aria-live="polite"></p>
+            </div>
+          </article>
+        </div>
+        <p class="mt-10 text-center font-script text-lg leading-loose text-terracota sm:text-xl">Obrigado por sustentar esta comunidade!</p>
+      </div>
+    </section>
+    <section id="formulario" class="scroll-mt-24 bg-crema py-20">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <header class="text-center">
+          <p class="font-script text-lg leading-loose text-terracota sm:text-xl">escreva para nós</p>
+          <h2 class="font-display uppercase tracking-tight text-[2.1rem] leading-[1.05] text-pizarra sm:text-5xl">Envie uma mensagem</h2>
+          <p class="mt-3 text-pizarra-oscuro/80">Respondemos por e-mail.</p>
+        </header>
+        <form id="formContacto" class="mt-10 space-y-5 rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 sm:p-8" novalidate>
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="nombre" class="block text-sm font-bold">Nome</label>
+              <input id="nombre" name="nombre" type="text" required autocomplete="name" class="mt-1 w-full rounded-xl border-0 bg-crema px-4 py-3 ring-1 ring-black/10 focus:ring-2 focus:ring-agua-oscuro" />
+            </div>
+            <div>
+              <label for="contacto" class="block text-sm font-bold">Seu e-mail</label>
+              <input id="contacto" name="contacto" type="email" required autocomplete="email" inputmode="email" class="mt-1 w-full rounded-xl border-0 bg-crema px-4 py-3 ring-1 ring-black/10 focus:ring-2 focus:ring-agua-oscuro" />
+            </div>
+          </div>
+          <div>
+            <label for="motivo" class="block text-sm font-bold">Motivo</label>
+            <select id="motivo" name="motivo" class="mt-1 w-full rounded-xl border-0 bg-crema px-4 py-3 ring-1 ring-black/10 focus:ring-2 focus:ring-agua-oscuro">
+              <option>Dúvida geral</option>
+              <option>Sacramentos (batismo, crisma, casamento)</option>
+              <option>Participar de uma atividade ou grupo</option>
+              <option>Oferecer meus dons</option>
+              <option>Participar de um serviço</option>
+              <option>Projeto Santuário</option>
+              <option>Ser padrinho / colaborar</option>
+              <option>Loja pastoral</option>
+            </select>
+          </div>
+          <div>
+            <label for="mensaje" class="block text-sm font-bold">Mensagem</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required class="mt-1 w-full rounded-xl border-0 bg-crema px-4 py-3 ring-1 ring-black/10 focus:ring-2 focus:ring-agua-oscuro"></textarea>
+          </div>
+          <button type="submit" class="flex w-full items-center justify-center gap-2 rounded-full bg-terracota px-6 py-3.5 font-bold text-white shadow hover:bg-terracota-oscuro transition disabled:opacity-60">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Enviar mensagem
+          </button>
+          <p id="formMsg" class="text-sm font-semibold" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto" class="bg-pizarra-oscuro text-white">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
+      <div>
+        <img src="../../../img/logo.png" alt="" class="h-16 w-auto rounded-xl bg-white/90 p-1" />
+        <p class="mt-3 font-display uppercase tracking-wide">Paróquia San Lucas</p>
+        <p class="font-script text-sm leading-loose text-agua-claro">capela dos jovens</p>
+        <p class="mt-2 text-sm text-white/80">Seguimos Jesus no meio do mundo.</p>
+        <a href="https://www.instagram.com/parroquia.sanlucas/" target="_blank" rel="noopener" class="mt-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition" aria-label="Instagram da Paróquia San Lucas">
+          <i class="fa-brands fa-instagram text-2xl" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div>
+        <p class="text-sm font-bold uppercase tracking-wider text-agua-claro">Contato</p>
+        <dl class="mt-3 space-y-3 text-sm">
+          <div><dt class="text-white/60">Pároco</dt><dd class="font-semibold">Pe. Santiago María Obiglio</dd></div>
+          <div><dt class="text-white/60">Endereço</dt><dd>Paraguay 2150, Plaza Houssay · CABA<br /><a href="https://maps.app.goo.gl/1hrF257kr9DVHAkt8" target="_blank" rel="noopener" class="font-semibold underline underline-offset-4 hover:text-agua">Como chegar pelo Google Maps</a></dd></div>
+          <!-- COMPLETAR teléfono y mail -->
+          <div><dt class="text-white/60">Telefone / WhatsApp</dt><dd>[Completar telefone]</dd></div>
+          <div><dt class="text-white/60">E-mail</dt><dd><a href="mailto:parroquiasanlucasba@gmail.com" class="underline underline-offset-4 hover:text-agua-claro break-all">parroquiasanlucasba@gmail.com</a></dd></div>
+        </dl>
+        <a href="../../pt/colabora/#formulario" class="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-pizarra-oscuro hover:bg-crema transition"><i class="fa-regular fa-envelope" aria-hidden="true"></i> Envie uma mensagem</a>
+      </div>
+      <div>
+        <p class="text-sm font-bold uppercase tracking-wider text-agua-claro">Missas</p>
+        <ul class="mt-3 space-y-1 text-sm">
+          <li>Terça a sexta · 12.15 e 19.30</li>
+          <li>Sábados · 19.30</li>
+          <li>Domingos · 12.15 e 19.30</li>
+          <li>Segunda · fechado</li>
+        </ul>
+        <a href="../../pt/nosotros/#horarios" class="mt-3 inline-block text-sm font-semibold underline underline-offset-4 hover:text-agua">Ver todos os horários</a>
+      </div>
+      <div>
+        <iframe title="Mapa: Paróquia Universitária San Lucas, Paraguay 2150"
+          src="https://www.google.com/maps?q=Parroquia+Universitaria+San+Lucas,+Paraguay+2150,+Buenos+Aires&ll=-34.5990275,-58.398112&z=16&output=embed"
+          class="h-48 w-full rounded-2xl border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="border-t border-white/15 py-5 text-center text-xs text-white/70">
+      © <span id="anio">2026</span> Paróquia San Lucas · Arquidiocese de Buenos Aires. Todos os direitos reservados.
+    </div>
+  </footer>
+  <script src="../../../js/sitio.js"></script>
+</body>
+</html>
